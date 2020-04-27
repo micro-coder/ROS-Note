@@ -4,17 +4,31 @@
     "description": "",
     "language" : "zh-hans",
     "plugins" : [ 
-        "code" 
-    
-    
+        "code" ,
+        "github",
+        "theme-comscore",
+        "tbfed-pagefooter",
+        "search-plus",
+        "expandable-chapters",
+        "splitter" 
     ],
 
 
 
     "pluginsConfig": {
-        "code": {
+      "theme-default": {
+        "treeLevel": true
+      },
+      "github": {
+        "url": "https://github.com/micro-coder/ROS-Note"
+    },
+      "code": {
           "copyButtons": true
-        }
-
+      },
+      "tbfed-pagefooter": {
+          "copyright":"&copy 黄文庆",
+          "modify_label": "文件修订时间：",
+          "modify_format": "YYYY-MM-DD HH:mm:ss"
       }
+    }
 }

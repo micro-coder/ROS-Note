@@ -1,4 +1,4 @@
-# 第一章   ROS 安装
+# 第一篇   ROS 安装
 
 1. 在安装之前，先要配置好Ubuntu的系统环境
 打开`System Settings` -> `Software & updates` -> `ubuntu software`，全部都勾选,如图所示:
@@ -26,16 +26,16 @@ sudo apt upgrade
 ROS中有很多函数库和工具，官网提供了四种默认的安装方式，当然也可以单独安装某个特定的软件包。这四种方式包括**桌面完整版安装、桌面版安装，基础版安装、单独软件包安装**。推荐安装桌面完整版安装（包含ROS、rqt、rviz、通用机器人函数库、2D/3D仿真器、导航以及2D/3D感知功能），如下：
 * 安装Kinetic版本的ROS(**desktop-full : 桌面完整版**)
   ```
-    sudo apt-get install ros-kinetic-desktop-full 
+  sudo apt-get install ros-kinetic-desktop-full 
   ```
 如果你不想安装**桌面完整版**，你还可以尝试以下三种方式安装：
 - **桌面版安装**（包含ROS、rqt、rviz以及通用机器人函数库）
   ```
-    sudo apt-get install ros-kinetic-desktop
+  sudo apt-get install ros-kinetic-desktop
   ```
 - **基础版安装**（包含ROS核心软件包、构建工具以及通信相关的程序库，无GUI工具）
   ```
-    sudo apt-get install ros-kinetic-ros-base
+  sudo apt-get install ros-kinetic-ros-base
   ```
 - **单独软件包安装**（这种安装方式在运行ROS缺少某些package依赖时会经常用到。你可以安装某个指定的ROS软件包,使用软件包名称替换掉下面的PACKAGE）
   ``` 
@@ -49,3 +49,4 @@ ROS中有很多函数库和工具，官网提供了四种默认的安装方式�
   ```
   apt-cache search ros-kinetic
   ```
+
