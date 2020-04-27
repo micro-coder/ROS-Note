@@ -43,7 +43,8 @@ rosdep update
   rosrun turtlesim turtle_teleop_key
   ```
   接下来，我们运行在这个终端里，并通过键盘上的方向键，就可以控制小海龟的运动了。
-![1.6](picture/1-6.png)
+  ![1.6](picture/1-6.png)  
+
 至此，经过了上面的测试，ROS的安装、配置工作就已经全部完成了。
 
 下面就可以正式开启ROS的学习之旅～～～
