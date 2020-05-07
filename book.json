@@ -16,7 +16,9 @@
         "github-buttons",
         "prism",
         "-highlight",
-        "mygitalk"
+        "mygitalk",
+        "pageview-count",
+        "tbfed-pagefooter"
     ],
 
 

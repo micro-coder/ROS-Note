@@ -28,7 +28,7 @@ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
 *<font color="red">**注：**</font>以上命令很重要，缺少依赖将导致教学包无法正常编译和运行*
 
-5. 在开始编译教学代码之前，还需要确保安装的gazebo版本在7.0及7.0以上
+5. 在开始编译教学代码之前，还需要确保安装的[gazebo](http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install)版本在7.0及7.0以上
 使用指令查看一下
 ```
 gazebo -v
