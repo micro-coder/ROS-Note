@@ -7,12 +7,17 @@
         "code" ,
         "github",
         "theme-comscore",
-        "tbfed-pagefooter",
         "search-plus",
         "expandable-chapters",
-        "splitter" 
+        "splitter" ,
+        "popup",
+        "katex",
+        "emphasize",
+        "github-buttons",
+        "prism",
+        "-highlight",
+        "mygitalk"
     ],
-
 
 
     "pluginsConfig": {
@@ -29,6 +34,37 @@
           "copyright":"&copy 黄文庆",
           "modify_label": "文件修订时间：",
           "modify_format": "YYYY-MM-DD HH:mm:ss"
+      },
+      "github-buttons": {
+        "buttons": [{
+          "user": "micro-coder",
+          "repo": "ROS-Note",
+          "type": "star",
+          "size": "small"
+        }, {
+          "user": "micro-coder",
+          "type": "follow",
+          "width": "230",
+          "count": true
+        }]
+      },
+      "prism": {
+        "css": [
+            "prismjs/themes/prism-tomorrow.css"
+        ]
+      },
+      "mathjax":{
+         "forceSVG": true
+      },
+      "mygitalk":{
+        "enable": true,
+        "clientID": "5b544b68bfe5308dca6f",
+        "clientSecret": "b9c49dd9868905960a606a8a116f86b842478507",
+        "repo": "ROS-Note",
+        "owner": "micro-coder",
+        "admin": ["micro-coder"],
+        "distractionFreeMode": false
+
       }
     }
 }

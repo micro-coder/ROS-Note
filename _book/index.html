@@ -21,10 +21,6 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
                 
             
@@ -37,7 +33,19 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 
             
                 
@@ -73,6 +81,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -81,9 +90,20 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Chapter1/install.html" />
+    <link rel="next" href="Chapter1/Introduction.html" />
     
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]};
+    </script>
 
     </head>
     <body>
@@ -124,12 +144,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="Chapter1/install.html">
+        <li class="chapter " data-level="1.2" data-path="Chapter1/Introduction.html">
             
-                <a href="Chapter1/install.html">
+                <a href="Chapter1/Introduction.html">
             
                     
-                    第一章 ROS安装
+                    第一章 ROS基础搭建
             
                 </a>
             
@@ -138,12 +158,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="Chapter1/install.html">
+        <li class="chapter " data-level="1.2.1" data-path="Chapter1/ROS安装.html">
             
-                <a href="Chapter1/install.html">
+                <a href="Chapter1/ROS安装.html">
             
                     
-                    第一篇
+                    第一篇 ROS安装
             
                 </a>
             
@@ -151,12 +171,96 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="Chapter1/Config.html">
+        <li class="chapter " data-level="1.2.2" data-path="Chapter1/ROS配置.html">
             
-                <a href="Chapter1/Config.html">
+                <a href="Chapter1/ROS配置.html">
             
                     
-                    第二篇
+                    第二篇 ROS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Chapter1/小结.html">
+            
+                <a href="Chapter1/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Chapter2/Introduction.html">
+            
+                <a href="Chapter2/Introduction.html">
+            
+                    
+                    第二章 ROS学习基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Chapter2/安装ROS-Beginners教学包.html">
+            
+                <a href="Chapter2/安装ROS-Beginners教学包.html">
+            
+                    
+                    第一篇 资料源码下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Chapter2/二进制vs源码安装.html">
+            
+                <a href="Chapter2/二进制vs源码安装.html">
+            
+                    
+                    第二篇 二进制vs源码安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Chapter2/安装RoboWareStudio.html">
+            
+                <a href="Chapter2/安装RoboWareStudio.html">
+            
+                    
+                    第三篇 安装RoboWare Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Chapter2/小结.html">
+            
+                <a href="Chapter2/小结.html">
+            
+                    
+                    小结篇
             
                 </a>
             
@@ -218,10 +322,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="introduction">Introduction</h1>
-<p>ROS&#x5B66;&#x4E60;&#x8BB0;&#x5F55;</p>
-<footer class="page-footer"><span class="copyright">&#xA9; &#x9EC4;&#x6587;&#x5E86; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-04-27 12:42:07
-</span></footer>
+<p>ROS&#x5B66;&#x4E60;&#x8BB0;&#x5F55;<br>ROS&#x7248;&#x672C;&#xFF1A;Kinetic<br>&#x7CFB;&#x7EDF;&#xFF1A;Ubuntu16.04</p>
+<div id="gitalk-container"></div>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -265,7 +368,7 @@
             
                 
                 
-                <a href="Chapter1/install.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 第一章 ROS安装">
+                <a href="Chapter1/Introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 第一章 ROS基础搭建">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -276,7 +379,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"第一章 ROS安装","level":"1.2","depth":1,"path":"Chapter1/install.md","ref":"Chapter1/install.md","articles":[{"title":"第一篇","level":"1.2.1","depth":2,"path":"Chapter1/install.md","ref":"Chapter1/install.md","articles":[]},{"title":"第二篇","level":"1.2.2","depth":2,"path":"Chapter1/Config.md","ref":"Chapter1/Config.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","tbfed-pagefooter","search-plus","expandable-chapters","splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"README.md","mtime":"2020-04-27T04:42:07.052Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-27T04:42:27.383Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"第一章 ROS基础搭建","level":"1.2","depth":1,"path":"Chapter1/Introduction.md","ref":"Chapter1/Introduction.md","articles":[{"title":"第一篇 ROS安装","level":"1.2.1","depth":2,"path":"Chapter1/ROS安装.md","ref":"Chapter1/ROS安装.md","articles":[]},{"title":"第二篇 ROS配置","level":"1.2.2","depth":2,"path":"Chapter1/ROS配置.md","ref":"Chapter1/ROS配置.md","articles":[]},{"title":"小结篇","level":"1.2.3","depth":2,"path":"Chapter1/小结.md","ref":"Chapter1/小结.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","emphasize","github-buttons","prism","-highlight","mygitalk","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"emphasize":{},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"README.md","mtime":"2020-05-06T09:52:43.860Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T07:30:36.887Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -307,6 +410,22 @@
     
         
         <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
         
     
         
