@@ -1,0 +1,793 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第八篇 package.xml · ROS学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黄文庆">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Metapackage.html" />
+    
+    
+    <link rel="prev" href="CMakeLists.txt.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/Introduction.html">
+            
+                <a href="../Chapter1/Introduction.html">
+            
+                    
+                    第一章 ROS基础搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/ROS安装.html">
+            
+                <a href="../Chapter1/ROS安装.html">
+            
+                    
+                    第一篇 ROS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/ROS配置.html">
+            
+                <a href="../Chapter1/ROS配置.html">
+            
+                    
+                    第二篇 ROS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/小结.html">
+            
+                <a href="../Chapter1/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    第二章 ROS学习基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="安装ROS-Beginners教学包.html">
+            
+                <a href="安装ROS-Beginners教学包.html">
+            
+                    
+                    第一篇 学习资料源码下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="二进制vs源码安装.html">
+            
+                <a href="二进制vs源码安装.html">
+            
+                    
+                    第二篇 二进制vs源码安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="安装RoboWareStudio.html">
+            
+                <a href="安装RoboWareStudio.html">
+            
+                    
+                    第三篇 安装RoboWare Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="catkin编译系统.html">
+            
+                <a href="catkin编译系统.html">
+            
+                    
+                    第四篇 catkin编译系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="catkin工作空间.html">
+            
+                <a href="catkin工作空间.html">
+            
+                    
+                    第五篇 catkin工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="package.html">
+            
+                <a href="package.html">
+            
+                    
+                    第六篇 package包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="CMakeLists.txt.html">
+            
+                <a href="CMakeLists.txt.html">
+            
+                    
+                    第七篇 CMakeLists.txt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="package_xml.html">
+            
+                <a href="package_xml.html">
+            
+                    
+                    第八篇 package.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="Metapackage.html">
+            
+                <a href="Metapackage.html">
+            
+                    
+                    第九篇 Metapackage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="其他常见文件类型.html">
+            
+                <a href="其他常见文件类型.html">
+            
+                    
+                    第十篇 其他常见文件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="小结.html">
+            
+                <a href="小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/Introduction.html">
+            
+                <a href="../Chapter3/Introduction.html">
+            
+                    
+                    第三章 ROS通信架构体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/node&master.html">
+            
+                <a href="../Chapter3/node&master.html">
+            
+                    
+                    第一篇 node&master
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/launch.html">
+            
+                <a href="../Chapter3/launch.html">
+            
+                    
+                    第二篇 launch文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter3/topic.html">
+            
+                <a href="../Chapter3/topic.html">
+            
+                    
+                    第三篇 topic话题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter3/message.html">
+            
+                <a href="../Chapter3/message.html">
+            
+                    
+                    第四篇 msg消息格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Chapter3/service.html">
+            
+                <a href="../Chapter3/service.html">
+            
+                    
+                    第五篇 service服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/srv.html">
+            
+                <a href="../Chapter3/srv.html">
+            
+                    
+                    第六篇 srv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第八篇 package.xml</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="packagexml">package.xml</h1>
+<p>package.xml&#x4E5F;&#x662F;&#x4E00;&#x4E2A;catkin&#x7684;package&#x5FC5;&#x5907;&#x6587;&#x4EF6;&#xFF0C;<strong>&#x5B83;&#x662F;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#xFF0C;</strong>&#x5728;&#x8F83;&#x65E9;&#x7684;ROS&#x7248;&#x672C;(rosbuild&#x7F16;&#x8BD1;&#x7CFB;&#x7EDF;)&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x53EB;&#x505A;manifest.xml&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;pacakge&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;&#x7F51;&#x4E0A;&#x770B;&#x5230;&#x4E00;&#x4E9B;ROS&#x9879;&#x76EE;&#x91CC;&#x5305;&#x542B;&#x7740;manifest.xml&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x591A;&#x534A;&#x662F;hydro&#x7248;&#x672C;&#x4E4B;&#x524D;&#x7684;&#x9879;&#x76EE;&#x3002;</p>
+<h2 id="packagexml&#x4F5C;&#x7528;">package.xml&#x4F5C;&#x7528;</h2>
+<p>pacakge.xml&#x5305;&#x542B;package&#x7684;&#x540D;&#x79F0;&#x3001;&#x7248;&#x672C;&#x53F7;&#x3001;&#x5185;&#x5BB9;&#x63CF;&#x8FF0;&#x3001;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x3001;&#x8F6F;&#x4EF6;&#x8BB8;&#x53EF;&#x3001;&#x7F16;&#x8BD1;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3001;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x3001;&#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x7B49;&#x4FE1;&#x606F;&#x3002;
+&#x5B9E;&#x9645;&#x4E0A;<code>rospack find</code>&#x3001;<code>rosdep</code>&#x7B49;&#x547D;&#x4EE4;&#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x548C;&#x5206;&#x6790;&#x51FA;package&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x4E86;&#x6BCF;&#x4E00;&#x4E2A;pacakge&#x4E2D;&#x7684;package.xml&#x6587;&#x4EF6;&#x3002;&#x5B83;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x5FEB;&#x901F;&#x4E86;&#x89E3;&#x4E00;&#x4E2A;pacakge&#x7684;&#x6E20;&#x9053;&#x3002;</p>
+<h2 id="packagexml&#x5199;&#x6CD5;">package.xml&#x5199;&#x6CD5;</h2>
+<p>pacakge.xml&#x9075;&#x5FAA;xml&#x6807;&#x7B7E;&#x6587;&#x672C;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x7531;&#x4E8E;&#x7248;&#x672C;&#x66F4;&#x8FED;&#x539F;&#x56E0;&#xFF0C;&#x73B0;&#x5728;&#x6709;&#x4E24;&#x79CD;&#x683C;&#x5F0F;&#x5E76;&#x5B58;&#xFF08;format1&#x4E0E;format2&#xFF09;&#xFF0C;&#x4E0D;&#x8FC7;&#x533A;&#x522B;&#x4E0D;&#x5927;&#x3002;&#x8001;&#x7248;&#x672C;&#xFF08;format1&#xFF09;&#x7684;pacakge.xml&#x901A;&#x5E38;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x6807;&#x7B7E;:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pacakge</span><span class="token punctuation">&gt;</span></span>           &#x6839;&#x6807;&#x8BB0;&#x6587;&#x4EF6;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>              &#x5305;&#x540D;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>           &#x7248;&#x672C;&#x53F7;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>       &#x5185;&#x5BB9;&#x63CF;&#x8FF0;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maintainer</span><span class="token punctuation">&gt;</span></span>        &#x7EF4;&#x62A4;&#x8005; 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">&gt;</span></span>           &#x8F6F;&#x4EF6;&#x8BB8;&#x53EF;&#x8BC1;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>  &#x7F16;&#x8BD1;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;catkin  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>      &#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x4E0E;Catkin&#x4E2D;&#x7684;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>        &#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x9879;
+&#x8BF4;&#x660E;&#xFF1A;&#x5176;&#x4E2D;1-6&#x4E3A;&#x5FC5;&#x5907;&#x6807;&#x7B7E;&#xFF0C;1&#x662F;&#x6839;&#x6807;&#x7B7E;&#xFF0C;&#x5D4C;&#x5957;&#x4E86;&#x5176;&#x4F59;&#x7684;&#x6240;&#x6709;&#x6807;&#x7B7E;&#xFF0C;2-6&#x4E3A;&#x5305;&#x7684;&#x5404;&#x79CD;&#x5C5E;&#x6027;&#xFF0C;7-9&#x4E3A;&#x7F16;&#x8BD1;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;
+</code></pre><p>&#x5728;&#x65B0;&#x7248;&#x672C;&#xFF08;format2&#xFF09;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x7684;&#x6807;&#x7B7E;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pacakge</span><span class="token punctuation">&gt;</span></span>               &#x6839;&#x6807;&#x8BB0;&#x6587;&#x4EF6;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>                  &#x5305;&#x540D;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>               &#x7248;&#x672C;&#x53F7;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>           &#x5185;&#x5BB9;&#x63CF;&#x8FF0;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maintainer</span><span class="token punctuation">&gt;</span></span>            &#x7EF4;&#x62A4;&#x8005; 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">&gt;</span></span>               &#x8F6F;&#x4EF6;&#x8BB8;&#x53EF;&#x8BC1;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>      &#x7F16;&#x8BD1;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;catkin    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>                &#x6307;&#x5B9A;&#x4F9D;&#x8D56;&#x9879;&#x4E3A;&#x7F16;&#x8BD1;&#x3001;&#x5BFC;&#x51FA;&#x3001;&#x8FD0;&#x884C;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x6700;&#x5E38;&#x7528;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>          &#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x9879;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_export_depend</span><span class="token punctuation">&gt;</span></span>   &#x5BFC;&#x51FA;&#x4F9D;&#x8D56;&#x9879;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">&gt;</span></span>           &#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x9879;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>test_depend</span><span class="token punctuation">&gt;</span></span>           &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4F9D;&#x8D56;&#x9879;  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>doc_depend</span><span class="token punctuation">&gt;</span></span>            &#x6587;&#x6863;&#x4F9D;&#x8D56;&#x9879;
+&#x76EE;&#x524D;Indigo&#x3001;Kinetic&#x3001;Lunar&#x7B49;&#x7248;&#x672C;&#x7684;ROS&#x90FD;&#x540C;&#x65F6;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x7248;&#x672C;&#x7684;package.xml&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x8BBA;&#x9009;&#x54EA;&#x79CD;&#x683C;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;&#x3002;
+</code></pre><h2 id="packagexml&#x4F8B;&#x5B50;">package.xml&#x4F8B;&#x5B50;</h2>
+<p>&#x4E3A;&#x4E86;&#x8BF4;&#x660E;pacakge.xml&#x5199;&#x6CD5;&#xFF0C;&#x8FD8;&#x662F;&#x4EE5;turtlesim&#x8F6F;&#x4EF6;&#x5305;&#x4E3A;&#x4F8B;&#xFF0C;&#x5176;pacakge.xml&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x6DFB;&#x52A0;&#x4E86;&#x76F8;&#x5173;&#x7684;&#x6CE8;&#x91CA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot;?&gt;</span>       <span class="token comment">&lt;!--&#x672C;&#x793A;&#x4F8B;&#x4E3A;&#x8001;&#x7248;&#x672C;&#x7684;pacakge.xml--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>package</span><span class="token punctuation">&gt;</span></span>                   <span class="token comment">&lt;!--pacakge&#x4E3A;&#x6839;&#x6807;&#x7B7E;&#xFF0C;&#x5199;&#x5728;&#x6700;&#x5916;&#x9762;--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>turtlesim<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>
+    turtlesim is a tool made for teaching ROS and ROS packages.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maintainer</span> <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dthomas@osrfoundation.org<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Dirk Thomas<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maintainer</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">&gt;</span></span>BSD<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>license</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>website<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>http://www.ros.org/wiki/turtlesim<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bugtracker<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>https://github.com/ros/ros_tutorials/issues<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>repository<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>https://github.com/ros/ros_tutorials<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>author</span><span class="token punctuation">&gt;</span></span>Josh Faust<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>author</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x4E3A;catkin--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>catkin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--&#x7F16;&#x8BD1;&#x65F6;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4EE5;&#x4E0B;&#x5305;--&gt;</span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>geometry_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>qtbase5-dev<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>qt5-qmake<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>rosconsole<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>roscpp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>roscpp_serialization<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>roslib<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>rostime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>std_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>std_srvs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--&#x8FD0;&#x884C;&#x65F6;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4EE5;&#x4E0B;&#x5305;--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>geometry_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>libqt5-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>libqt5-gui<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>rosconsole<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>roscpp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>roscpp_serialization<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>roslib<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>rostime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>std_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>run_depend</span><span class="token punctuation">&gt;</span></span>std_srvs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>run_depend</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>package</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x662F;&#x8001;&#x7248;&#x672C;&#xFF08;format1&#xFF09;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5199;&#x6210;&#x65B0;&#x7248;&#x672C;&#xFF08;format2&#xFF09;&#x5219;&#x53EF;&#x4EE5;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>package</span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>      <span class="token comment">&lt;!--&#x5728;&#x58F0;&#x660E;pacakge&#x65F6;&#x6307;&#x5B9A;format2&#xFF0C;&#x4E3A;&#x65B0;&#x7248;&#x683C;&#x5F0F;--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>turtlesim<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>
+    turtlesim is a tool made for teaching ROS and ROS packages.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maintainer</span> <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dthomas@osrfoundation.org<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Dirk Thomas<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maintainer</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">&gt;</span></span>BSD<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>license</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>website<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>http://www.ros.org/wiki/turtlesim<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bugtracker<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>https://github.com/ros/ros_tutorials/issues<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>repository<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>https://github.com/ros/ros_tutorials<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>author</span><span class="token punctuation">&gt;</span></span>Josh Faust<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>author</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x4E3A;catkin--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>catkin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>buildtool_depend</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--&#x7528;depend&#x6765;&#x6574;&#x5408;build_depend&#x548C;run_depend&#x5171;&#x540C;&#x4F9D;&#x8D56;&#x9879;--&gt;</span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>geometry_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>rosconsole<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>roscpp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>roscpp_serialization<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>roslib<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>rostime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>std_msgs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span>std_srvs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--build_depend&#x6807;&#x7B7E;&#x672A;&#x53D8;--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>qtbase5-dev<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">&gt;</span></span>qt5-qmake<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!--run_depend&#x8981;&#x6539;&#x4E3A;exec_depend--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">&gt;</span></span>libqt5-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">&gt;</span></span>libqt5-gui<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">&gt;</span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>package</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="page-footer"><span class="copyright">&#xA9; &#x9EC4;&#x6587;&#x5E86; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-05-09 17:51:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CMakeLists.txt.html" class="navigation navigation-prev " aria-label="Previous page: 第七篇 CMakeLists.txt">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Metapackage.html" class="navigation navigation-next " aria-label="Next page: 第九篇 Metapackage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第八篇 package.xml","level":"1.3.8","depth":2,"next":{"title":"第九篇 Metapackage","level":"1.3.9","depth":2,"path":"Chapter2/Metapackage.md","ref":"Chapter2/Metapackage.md","articles":[]},"previous":{"title":"第七篇 CMakeLists.txt","level":"1.3.7","depth":2,"path":"Chapter2/CMakeLists.txt.md","ref":"Chapter2/CMakeLists.txt.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","emphasize","github-buttons","prism","-highlight","mygitalk","pageview-count","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"emphasize":{},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter2/package_xml.md","mtime":"2020-05-09T09:51:14.870Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-10T09:42:23.871Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

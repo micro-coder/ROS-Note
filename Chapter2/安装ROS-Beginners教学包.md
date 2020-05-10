@@ -33,7 +33,7 @@ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
 gazebo -v
 ```
-如果你的gazebo版本低于7.0，则需要升级
+如果你的gazebo版本低于7.0，则需要升级(命令来自于[gazebo官网](http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install))
 ```bash
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
@@ -68,6 +68,6 @@ source ~/tutorial_ws/devel/setup.bash
   ```
   将会打开键盘控制程序，可以控制机器人移动。
   聚焦键盘控制终端窗口，按下I，J,L等按键，这样就通过键盘控制机器人移动了。
-8. 当完成了上面7个步骤之后，不知不觉中，我们就已经完成了ROS中最常见的 *源码下载->安装依赖->编译->运行* 的流程了。  
+8. 当完成了上面7个步骤之后，不知不觉中，我们就已经完成了ROS中最常见的*<font color="red">**源码下载->安装依赖->编译->运行**</font>*的流程了。  
 在ROS社区有许许多多这样的软件代码包，基本都按照这样的流程来运行。相信你一定可以举一反三。
 
