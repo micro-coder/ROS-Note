@@ -1,0 +1,853 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四篇 msg消息格式 · ROS学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黄文庆">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="service.html" />
+    
+    
+    <link rel="prev" href="topic.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/Introduction.html">
+            
+                <a href="../Chapter1/Introduction.html">
+            
+                    
+                    第一章 ROS基础搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/ROS安装.html">
+            
+                <a href="../Chapter1/ROS安装.html">
+            
+                    
+                    第一篇 ROS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/ROS配置.html">
+            
+                <a href="../Chapter1/ROS配置.html">
+            
+                    
+                    第二篇 ROS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/小结.html">
+            
+                <a href="../Chapter1/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/Introduction.html">
+            
+                <a href="../Chapter2/Introduction.html">
+            
+                    
+                    第二章 ROS学习基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/安装ROS-Beginners教学包.html">
+            
+                <a href="../Chapter2/安装ROS-Beginners教学包.html">
+            
+                    
+                    第一篇 学习资料源码下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/二进制vs源码安装.html">
+            
+                <a href="../Chapter2/二进制vs源码安装.html">
+            
+                    
+                    第二篇 二进制vs源码安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/安装RoboWareStudio.html">
+            
+                <a href="../Chapter2/安装RoboWareStudio.html">
+            
+                    
+                    第三篇 安装RoboWare Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/catkin编译系统.html">
+            
+                <a href="../Chapter2/catkin编译系统.html">
+            
+                    
+                    第四篇 catkin编译系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/catkin工作空间.html">
+            
+                <a href="../Chapter2/catkin工作空间.html">
+            
+                    
+                    第五篇 catkin工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Chapter2/package.html">
+            
+                <a href="../Chapter2/package.html">
+            
+                    
+                    第六篇 package包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Chapter2/CMakeLists.txt.html">
+            
+                <a href="../Chapter2/CMakeLists.txt.html">
+            
+                    
+                    第七篇 CMakeLists.txt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Chapter2/package_xml.html">
+            
+                <a href="../Chapter2/package_xml.html">
+            
+                    
+                    第八篇 package.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Chapter2/Metapackage.html">
+            
+                <a href="../Chapter2/Metapackage.html">
+            
+                    
+                    第九篇 Metapackage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Chapter2/其他常见文件类型.html">
+            
+                <a href="../Chapter2/其他常见文件类型.html">
+            
+                    
+                    第十篇 其他常见文件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../Chapter2/小结.html">
+            
+                <a href="../Chapter2/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    第三章 ROS通信架构体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="node&master.html">
+            
+                <a href="node&master.html">
+            
+                    
+                    第一篇 node&master
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="launch.html">
+            
+                <a href="launch.html">
+            
+                    
+                    第二篇 launch文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="topic.html">
+            
+                <a href="topic.html">
+            
+                    
+                    第三篇 topic话题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    第四篇 msg消息格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="service.html">
+            
+                <a href="service.html">
+            
+                    
+                    第五篇 service服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="srv.html">
+            
+                <a href="srv.html">
+            
+                    
+                    第六篇 srv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第四篇 msg消息格式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="message&#x6D88;&#x606F;&#x683C;&#x5F0F;">message&#x6D88;&#x606F;&#x683C;&#x5F0F;</h1>
+<p>topic&#x6709;&#x5F88;&#x4E25;&#x683C;&#x7684;&#x683C;&#x5F0F;&#x8981;&#x6C42;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x8282;&#x7684;&#x6444;&#x50CF;&#x5934;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;rgb&#x56FE;&#x50CF;topic&#xFF0C;&#x5B83;&#x5C31;&#x5FC5;&#x7136;&#x8981;&#x9075;&#x5FAA;ROS&#x4E2D;&#x5B9A;&#x4E49;&#x597D;&#x7684;rgb&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5C31;&#x662F;Message&#x3002;Message&#x6309;&#x7167;&#x5B9A;&#x4E49;&#x89E3;&#x91CA;&#x5C31;&#x662F;topic&#x5185;&#x5BB9;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E5F;&#x79F0;&#x4E4B;&#x4E3A;topic&#x7684;&#x683C;&#x5F0F;&#x6807;&#x51C6;&#x3002;&#x8FD9;&#x91CC;&#x548C;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x7528;&#x5230;&#x7684;Massage&#x76F4;&#x89C2;&#x6982;&#x5FF5;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;Message&#x4E0D;&#x5355;&#x5355;&#x6307;&#x4E00;&#x6761;&#x53D1;&#x5E03;&#x6216;&#x8005;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x4E5F;&#x6307;&#x5B9A;&#x4E3A;topic&#x7684;&#x683C;&#x5F0F;&#x6807;&#x51C6;&#x3002;</p>
+<h2 id="&#x4E00;&#x3001;message&#x7ED3;&#x6784;&#x4E0E;&#x7C7B;&#x578B;">&#x4E00;&#x3001;message&#x7ED3;&#x6784;&#x4E0E;&#x7C7B;&#x578B;</h2>
+<p>&#x57FA;&#x672C;&#x7684;msg&#x5305;&#x62EC;bool&#x3001;int8&#x3001;int16&#x3001;int32&#x3001;int64(&#x4EE5;&#x53CA;uint)&#x3001;float&#x3001;float64&#x3001;string&#x3001;time&#x3001;duration&#x3001;header&#x3001;&#x53EF;&#x53D8;&#x957F;&#x6570;&#x7EC4;array[] &#x3001;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x6570;&#x7EC4;array[C]&#x3002;&#x90A3;&#x4E48;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;msg&#x662F;&#x600E;&#x4E48;&#x7EC4;&#x6210;&#x7684;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;msg&#x6765;&#x4E86;&#x89E3;&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x4F8B;&#x4E2D;&#x7684;msg&#xFF1A;sensor_msg/image,&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x662F; <strong>/opt/ros/kinetic/share/sensor_msgs</strong>,&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># This message contains an uncompressed image</span>
+<span class="token comment"># (0, 0) is at top-left corner of image</span>
+<span class="token comment">#</span>
+
+Header header        <span class="token comment"># Header timestamp should be acquisition time of image</span>
+                     <span class="token comment"># Header frame_id should be optical frame of camera</span>
+                     <span class="token comment"># origin of frame should be optical center of camera</span>
+                     <span class="token comment"># +x should point to the right in the image</span>
+                     <span class="token comment"># +y should point down in the image</span>
+                     <span class="token comment"># +z should point into to plane of the image</span>
+                     <span class="token comment"># If the frame_id here and the frame_id of the CameraInfo</span>
+                     <span class="token comment"># message associated with the image conflict</span>
+                     <span class="token comment"># the behavior is undefined</span>
+
+uint32 height         <span class="token comment"># image height, that is, number of rows</span>
+uint32 width          <span class="token comment"># image width, that is, number of columns</span>
+
+<span class="token comment"># The legal values for encoding are in file src/image_encodings.cpp</span>
+<span class="token comment"># If you want to standardize a new string format, join</span>
+<span class="token comment"># ros-users@lists.sourceforge.net and send an email proposing a new encoding.</span>
+
+string encoding       <span class="token comment"># Encoding of pixels -- channel meaning, ordering, size</span>
+                      <span class="token comment"># taken from the list of strings in include/sensor_msgs/image_encodings.h</span>
+
+uint8 is_bigendian    <span class="token comment"># is this data bigendian?</span>
+uint32 step           <span class="token comment"># Full row length in bytes</span>
+uint8<span class="token punctuation">[</span><span class="token punctuation">]</span> data          <span class="token comment"># actual matrix data, size is (step * rows)</span>
+</code></pre>
+<p><img src="picture/1-8.png" alt="Image.msg"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x91CC;&#x8FD8;&#x5D4C;&#x5957;&#x4E86;Header&#x7ED3;&#x6784;&#x4F53;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># Standard metadata for higher-level stamped data types.</span>
+<span class="token comment"># This is generally used to communicate timestamped data </span>
+<span class="token comment"># in a particular coordinate frame.</span>
+<span class="token comment"># </span>
+<span class="token comment"># sequence ID: consecutively increasing ID </span>
+uint32 seq
+<span class="token comment">#Two-integer timestamp that is expressed as:</span>
+<span class="token comment"># * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called &apos;secs&apos;)</span>
+<span class="token comment"># * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called &apos;nsecs&apos;)</span>
+<span class="token comment"># time-handling sugar is provided by the client library</span>
+time stamp
+<span class="token comment">#Frame this data is associated with</span>
+<span class="token comment"># 0: no frame</span>
+<span class="token comment"># 1: global frame</span>
+string frame_id
+</code></pre>
+<p><img src="picture/1-9.png" alt="Header.msg"></p>
+<p>&#x89C2;&#x5BDF;&#x4E0A;&#x9762;msg&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x7C7B;&#x4F3C;C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x5462;&#xFF1F;&#x901A;&#x8FC7;&#x5177;&#x4F53;&#x7684;&#x5B9A;&#x4E49;&#x56FE;&#x50CF;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x9AD8;&#x5EA6;&#x7B49;&#x7B49;&#x6765;&#x89C4;&#x8303;&#x56FE;&#x50CF;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x5C31;&#x89E3;&#x91CA;&#x4E86;Message&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7406;&#x89E3;&#x7684;&#x4E00;&#x6761;&#x4E00;&#x6761;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x800C;&#x4E14;&#x66F4;&#x662F;ROS&#x4E2D;topic&#x7684;&#x683C;&#x5F0F;&#x89C4;&#x8303;&#x3002;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x7406;&#x89E3;msg&#x662F;&#x4E00;&#x4E2A;&#x201C;&#x7C7B;&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x53D1;&#x5E03;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x201C;&#x5BF9;&#x8C61;&#x201D;&#xFF0C;&#x8FD9;&#x4E48;&#x5BF9;&#x6BD4;&#x6765;&#x7406;&#x89E3;&#x53EF;&#x80FD;&#x66F4;&#x52A0;&#x5BB9;&#x6613;&#x3002; &#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x628A;Message&#x6982;&#x5FF5;&#x5206;&#x7684;&#x90A3;&#x4E48;&#x6E05;&#xFF0C;&#x901A;&#x5E38;&#x8BF4;Message&#x65E2;&#x6307;&#x7684;&#x662F;&#x7C7B;&#xFF0C;&#x4E5F;&#x662F;&#x6307;&#x5B83;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x800C;msg&#x6587;&#x4EF6;&#x5219;&#x76F8;&#x5F53;&#x4E8E;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x4E86;&#x3002;</p>
+<h2 id="&#x4E8C;&#x3001;msg&#x64CD;&#x4F5C;&#x547D;&#x4EE4;">&#x4E8C;&#x3001;msg&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</h2>
+<p>rosmsg&#x7684;&#x547D;&#x4EE4;&#x76F8;&#x6BD4;topic&#x5C31;&#x6BD4;&#x8F83;&#x5C11;&#x4E86;&#xFF0C;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">rosmsg&#x547D;&#x4EE4;</th>
+<th style="text-align:center">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">rosmsg list</td>
+<td style="text-align:center">&#x5217;&#x51FA;&#x7CFB;&#x7EDF;&#x4E0A;&#x6240;&#x6709;&#x7684;msg</td>
+</tr>
+<tr>
+<td style="text-align:center">rosmsg show msg_name</td>
+<td style="text-align:center">&#x663E;&#x793A;&#x67D0;&#x4E2A;msg&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4E09;&#x3001;&#x5E38;&#x89C1;msg&#x6D88;&#x606F;&#x683C;&#x5F0F;">&#x4E09;&#x3001;&#x5E38;&#x89C1;msg&#x6D88;&#x606F;&#x683C;&#x5F0F;</h2>
+<p>&#x5E38;&#x89C1;&#x7684;message&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;std_msgs, sensor_msgs, nav_msgs, geometry_msgs&#x7B49;</p>
+<ol>
+<li><p><strong>Vector3.msg</strong>  </p>
+<p>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:geometry_msgs/Vector3.msg</p>
+<pre class="language-"><code>float64 x
+float64 y
+float64 z
+</code></pre></li>
+<li><p><strong>Accel.msg</strong>  </p>
+<p>&#x5B9A;&#x4E49;&#x52A0;&#x901F;&#x5EA6;&#x9879;&#xFF0C;&#x5305;&#x62EC;&#x7EBF;&#x6027;&#x52A0;&#x901F;&#x5EA6;&#x548C;&#x89D2;&#x52A0;&#x901F;&#x5EA6;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:geometry_msgs/Accel.msg</p>
+<pre class="language-"><code>Vector3 linear
+Vector3 angular
+</code></pre></li>
+<li><p><strong>Header.msg</strong></p>
+<p>&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7684;&#x53C2;&#x8003;&#x65F6;&#x95F4;&#x548C;&#x53C2;&#x8003;&#x5750;&#x6807;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:std_msgs/Header.msg</p>
+<pre class="language-"><code>uint32 seq      #&#x6570;&#x636E;ID
+time stamp      #&#x6570;&#x636E;&#x65F6;&#x95F4;&#x6233;
+string frame_id #&#x6570;&#x636E;&#x7684;&#x53C2;&#x8003;&#x5750;&#x6807;&#x7CFB;
+</code></pre></li>
+<li><p><strong>Echos.msg</strong>  </p>
+<p>&#x5B9A;&#x4E49;&#x8D85;&#x58F0;&#x4F20;&#x611F;&#x5668;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:&#x81EA;&#x5B9A;&#x4E49;msg&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>Header header
+uint16 front_left
+uint16 front_center
+uint16 front_right
+uint16 rear_left
+uint16 rear_center
+uint16 rear_right
+</code></pre></li>
+<li><p><strong>Quaternion.msg</strong></p>
+<p>&#x6D88;&#x606F;&#x4EE3;&#x8868;&#x7A7A;&#x95F4;&#x4E2D;&#x65CB;&#x8F6C;&#x7684;&#x56DB;&#x5143;&#x6570;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:geometry_msgs/Quaternion.msg</p>
+<pre class="language-"><code>float64 x
+float64 y
+float64 z
+float64 w
+</code></pre></li>
+<li><p><strong>Imu.msg</strong></p>
+<p>&#x6D88;&#x606F;&#x5305;&#x542B;&#x4E86;&#x4ECE;&#x60EF;&#x6027;&#x539F;&#x4EF6;&#x4E2D;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x52A0;&#x901F;&#x5EA6;&#x4E3A;m/^2&#xFF0C;&#x89D2;&#x901F;&#x5EA6;&#x4E3A;rad/s<br>&#x5982;&#x679C;&#x6240;&#x6709;&#x7684;&#x6D4B;&#x91CF;&#x534F;&#x65B9;&#x5DEE;&#x5DF2;&#x77E5;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5168;&#x90E8;&#x586B;&#x5145;&#x8FDB;&#x6765;<br>&#x5982;&#x679C;&#x53EA;&#x77E5;&#x9053;&#x65B9;&#x5DEE;&#xFF0C;&#x5219;&#x53EA;&#x586B;&#x5145;&#x534F;&#x65B9;&#x5DEE;&#x77E9;&#x9635;&#x7684;&#x5BF9;&#x89D2;&#x6570;&#x636E;&#x5373;&#x53EF;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;sensor_msgs/Imu.msg</p>
+<pre class="language-"><code>Header header
+Quaternion orientation
+float64[9] orientation_covariance
+Vector3 angular_velocity
+float64[9] angular_velocity_covariance
+Vector3 linear_acceleration
+float64[] linear_acceleration_covariance
+</code></pre></li>
+<li><p><strong>LaserScan.msg</strong></p>
+<p>&#x5E73;&#x9762;&#x5185;&#x7684;&#x6FC0;&#x5149;&#x6D4B;&#x8DDD;&#x626B;&#x63CF;&#x6570;&#x636E;<br>&#x6CE8;&#x610F;&#x6B64;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x4EC5;&#x4EC5;&#x9002;&#x914D;&#x6FC0;&#x5149;&#x6D4B;&#x8DDD;&#x8BBE;&#x5907;,&#x5982;&#x679C;&#x6709;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x6D4B;&#x8DDD;&#x8BBE;&#x5907;(&#x5982;&#x58F0;&#x5450;)&#xFF0C;&#x9700;&#x8981;&#x53E6;&#x5916;&#x521B;&#x5EFA;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;sensor_msgs/LaserScan.msg</p>
+<pre class="language-"><code>Header header            #&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#x63A5;&#x6536;&#x5230;&#x7B2C;&#x4E00;&#x675F;&#x6FC0;&#x5149;&#x7684;&#x65F6;&#x95F4;
+float32 angle_min        #&#x626B;&#x63CF;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x89D2;&#x5EA6;(&#x5355;&#x4F4D;&#x4E3A;rad)
+float32 angle_max        #&#x626B;&#x63CF;&#x7ED3;&#x675F;&#x65F6;&#x7684;&#x89D2;&#x5EA6;(&#x5355;&#x4F4D;&#x4E3A;rad)
+float32 angle_increment    #&#x4E24;&#x6B21;&#x6D4B;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x89D2;&#x5EA6;&#x589E;&#x91CF;(&#x5355;&#x4F4D;&#x4E3A;rad)
+float32 time_increment    #&#x4E24;&#x6B21;&#x6D4B;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x589E;&#x91CF;(&#x5355;&#x4F4D;&#x4E3A;s)
+float32 scan_time        #&#x4E24;&#x6B21;&#x626B;&#x63CF;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;(&#x5355;&#x4F4D;&#x4E3A;s)
+float32 range_min        #&#x8DDD;&#x79BB;&#x6700;&#x5C0F;&#x503C;(m)
+float32 range_max        #&#x8DDD;&#x79BB;&#x6700;&#x5927;&#x503C;(m)
+float32[] ranges        #&#x6D4B;&#x8DDD;&#x6570;&#x636E;(m,&#x5982;&#x679C;&#x6570;&#x636E;&#x4E0D;&#x5728;&#x6700;&#x5C0F;&#x6570;&#x636E;&#x548C;&#x6700;&#x5927;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#xFF0C;&#x5219;&#x629B;&#x5F03;)
+float32[] intensities    #&#x5F3A;&#x5EA6;&#xFF0C;&#x5177;&#x4F53;&#x5355;&#x4F4D;&#x7531;&#x6D4B;&#x91CF;&#x8BBE;&#x5907;&#x786E;&#x5B9A;&#xFF0C;&#x5982;&#x679C;&#x4EEA;&#x5668;&#x6CA1;&#x6709;&#x5F3A;&#x5EA6;&#x6D4B;&#x91CF;&#xFF0C;&#x5219;&#x6570;&#x7EC4;&#x4E3A;&#x7A7A;&#x5373;&#x53EF;
+</code></pre></li>
+<li><p><strong>Point.msg</strong></p>
+<p>&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:geometry_msgs/Point.msg</p>
+<pre class="language-"><code>float64 x
+float64 y
+float64 z
+</code></pre></li>
+<li><p><strong>Pose.msg</strong></p>
+<p>&#x6D88;&#x606F;&#x5B9A;&#x4E49;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x4F4D;&#x59FF;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x4F4D;&#x7F6E;&#x548C;&#x6307;&#x5411;&#x4FE1;&#x606F;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;:geometry_msgs/Pose.msg</p>
+<pre class="language-"><code>Point position
+Quaternion orientation
+</code></pre></li>
+<li><p><strong>PoseStamped.msg</strong></p>
+<p>&#x5B9A;&#x4E49;&#x6709;&#x65F6;&#x7A7A;&#x57FA;&#x51C6;&#x7684;&#x4F4D;&#x59FF;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;geometry_msgs/PoseStamped.msg</p>
+<pre class="language-"><code>Header header
+Pose pose
+</code></pre></li>
+<li><p><strong>PoseWithCovariance.msg</strong></p>
+<p>&#x8868;&#x793A;&#x7A7A;&#x95F4;&#x4E2D;&#x542B;&#x6709;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x4F4D;&#x59FF;&#x4FE1;&#x606F;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;geometry_msgs/PoseWithCovariance.msg</p>
+<pre class="language-"><code>Pose pose
+float64[36] covariance
+</code></pre></li>
+<li><p><strong>Power.msg</strong></p>
+<p>&#x8868;&#x793A;&#x7535;&#x6E90;&#x72B6;&#x6001;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;msg&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>Header header
+bool power
+######################
+bool ON  = 1
+bool OFF = 0
+</code></pre></li>
+<li><p><strong>Twist.msg</strong></p>
+<p>&#x5B9A;&#x4E49;&#x7A7A;&#x95F4;&#x4E2D;&#x7269;&#x4F53;&#x8FD0;&#x52A8;&#x7684;&#x7EBF;&#x901F;&#x5EA6;&#x548C;&#x89D2;&#x901F;&#x5EA6;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;geometry_msgs/Twist.msg</p>
+<pre class="language-"><code>Vector3 linear
+Vector3 angular
+</code></pre></li>
+<li><p><strong>TwistWithCovariance.msg</strong></p>
+<p>&#x6D88;&#x606F;&#x5B9A;&#x4E49;&#x4E86;&#x5305;&#x542B;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x901F;&#x5EA6;&#x91CF;&#xFF0C;&#x534F;&#x65B9;&#x5DEE;&#x77E9;&#x9635;&#x6309;&#x884C;&#x5206;&#x522B;&#x8868;&#x793A;&#xFF1A;<br>&#x6CBF;x&#x65B9;&#x5411;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x6CBF;y&#x65B9;&#x5411;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x6CBF;z&#x65B9;&#x5411;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;<br>&#x7ED5;x&#x8F6C;&#x52A8;&#x89D2;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x7ED5;y&#x8F74;&#x8F6C;&#x52A8;&#x7684;&#x89D2;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x7ED5;z&#x8F74;&#x8F6C;&#x52A8;&#x7684;&#x89D2;&#x901F;&#x5EA6;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;geometry_msgs/TwistWithCovariance.msg</p>
+<pre class="language-"><code>Twist twist
+float64[36] covariance  #&#x5206;&#x522B;&#x8868;&#x793A;[x; y; z; Rx; Ry; Rz]
+</code></pre></li>
+<li><p><strong>Odometry.msg</strong></p>
+<p>&#x6D88;&#x606F;&#x63CF;&#x8FF0;&#x4E86;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#x4E2D;&#x4F4D;&#x7F6E;&#x548C;&#x901F;&#x5EA6;&#x7684;&#x4F30;&#x8BA1;&#x503C;<br>&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;nav_msgs/Odometry.msg</p>
+<pre class="language-"><code>Header header
+string child_frame_id
+PoseWithCovariance pose
+TwistWithCovariance twist
+</code></pre><div id="gitalk-container"></div> 
+
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">&#xA9; &#x9EC4;&#x6587;&#x5E86; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-05-10 12:59:08
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="topic.html" class="navigation navigation-prev " aria-label="Previous page: 第三篇 topic话题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="service.html" class="navigation navigation-next " aria-label="Next page: 第五篇 service服务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四篇 msg消息格式","level":"1.4.4","depth":2,"next":{"title":"第五篇 service服务","level":"1.4.5","depth":2,"path":"Chapter3/service.md","ref":"Chapter3/service.md","articles":[]},"previous":{"title":"第三篇 topic话题","level":"1.4.3","depth":2,"path":"Chapter3/topic.md","ref":"Chapter3/topic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","emphasize","github-buttons","prism","-highlight","mygitalk","pageview-count","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"emphasize":{},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/message.md","mtime":"2020-05-10T04:59:08.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-10T09:42:23.871Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
