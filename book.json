@@ -12,13 +12,11 @@
         "splitter" ,
         "popup",
         "katex",
-        "emphasize",
         "github-buttons",
         "prism",
         "-highlight",
         "mygitalk",
-        "pageview-count",
-        "tbfed-pagefooter"
+        "pageview-count"
     ],
 
 
