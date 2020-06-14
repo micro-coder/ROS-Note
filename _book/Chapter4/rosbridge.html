@@ -1,0 +1,968 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第五篇 rosbridge · ROS学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黄文庆">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="moveit.html" />
+    
+    
+    <link rel="prev" href="rosbag.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/Introduction.html">
+            
+                <a href="../Chapter1/Introduction.html">
+            
+                    
+                    第一章 ROS基础搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/ROS安装.html">
+            
+                <a href="../Chapter1/ROS安装.html">
+            
+                    
+                    第一篇 ROS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/ROS配置.html">
+            
+                <a href="../Chapter1/ROS配置.html">
+            
+                    
+                    第二篇 ROS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/小结.html">
+            
+                <a href="../Chapter1/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/Introduction.html">
+            
+                <a href="../Chapter2/Introduction.html">
+            
+                    
+                    第二章 ROS学习基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/安装ROS-Beginners教学包.html">
+            
+                <a href="../Chapter2/安装ROS-Beginners教学包.html">
+            
+                    
+                    第一篇 学习资料源码下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/二进制vs源码安装.html">
+            
+                <a href="../Chapter2/二进制vs源码安装.html">
+            
+                    
+                    第二篇 二进制vs源码安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/安装RoboWareStudio.html">
+            
+                <a href="../Chapter2/安装RoboWareStudio.html">
+            
+                    
+                    第三篇 安装RoboWare Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/catkin编译系统.html">
+            
+                <a href="../Chapter2/catkin编译系统.html">
+            
+                    
+                    第四篇 catkin编译系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/catkin工作空间.html">
+            
+                <a href="../Chapter2/catkin工作空间.html">
+            
+                    
+                    第五篇 catkin工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Chapter2/package.html">
+            
+                <a href="../Chapter2/package.html">
+            
+                    
+                    第六篇 package包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Chapter2/CMakeLists.txt.html">
+            
+                <a href="../Chapter2/CMakeLists.txt.html">
+            
+                    
+                    第七篇 CMakeLists.txt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Chapter2/package_xml.html">
+            
+                <a href="../Chapter2/package_xml.html">
+            
+                    
+                    第八篇 package.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Chapter2/Metapackage.html">
+            
+                <a href="../Chapter2/Metapackage.html">
+            
+                    
+                    第九篇 Metapackage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Chapter2/其他常见文件类型.html">
+            
+                <a href="../Chapter2/其他常见文件类型.html">
+            
+                    
+                    第十篇 其他常见文件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../Chapter2/小结.html">
+            
+                <a href="../Chapter2/小结.html">
+            
+                    
+                    小结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/Introduction.html">
+            
+                <a href="../Chapter3/Introduction.html">
+            
+                    
+                    第三章 ROS通信架构体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/node&master.html">
+            
+                <a href="../Chapter3/node&master.html">
+            
+                    
+                    第一篇 node&master
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/launch.html">
+            
+                <a href="../Chapter3/launch.html">
+            
+                    
+                    第二篇 launch文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter3/topic.html">
+            
+                <a href="../Chapter3/topic.html">
+            
+                    
+                    第三篇 topic话题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter3/message.html">
+            
+                <a href="../Chapter3/message.html">
+            
+                    
+                    第四篇 msg消息格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Chapter3/service.html">
+            
+                <a href="../Chapter3/service.html">
+            
+                    
+                    第五篇 service服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/srv.html">
+            
+                <a href="../Chapter3/srv.html">
+            
+                    
+                    第六篇 srv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Chapter3/parameter_server.html">
+            
+                <a href="../Chapter3/parameter_server.html">
+            
+                    
+                    第七章 parameter_server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Chapter3/action.html">
+            
+                <a href="../Chapter3/action.html">
+            
+                    
+                    第八章 action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    第四章 ROS常用开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="gazebo.html">
+            
+                <a href="gazebo.html">
+            
+                    
+                    第一篇 gazebo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="RViz.html">
+            
+                <a href="RViz.html">
+            
+                    
+                    第二篇 RViz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="rqt.html">
+            
+                <a href="rqt.html">
+            
+                    
+                    第三篇 rqt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="rosbag.html">
+            
+                <a href="rosbag.html">
+            
+                    
+                    第四篇 rosbag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="rosbridge.html">
+            
+                <a href="rosbridge.html">
+            
+                    
+                    第五篇 rosbridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="moveit.html">
+            
+                <a href="moveit.html">
+            
+                    
+                    第六篇 moveit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/Introduction.html">
+            
+                <a href="../Chapter5/Introduction.html">
+            
+                    
+                    第五章 roscpp编程代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/ClientLibrary和roscpp.html">
+            
+                <a href="../Chapter5/ClientLibrary和roscpp.html">
+            
+                    
+                    第一篇 ClientLibrary和roscpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                <a href="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                    
+                    第二篇 节点初始、关闭以及NodeHandle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/topic_demo.html">
+            
+                <a href="../Chapter5/topic_demo.html">
+            
+                    
+                    第三篇 topic_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/spin.html">
+            
+                <a href="../Chapter5/spin.html">
+            
+                    
+                    第四篇 spin()与回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/service_demo.html">
+            
+                <a href="../Chapter5/service_demo.html">
+            
+                    
+                    第五篇 service_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/param_demo.html">
+            
+                <a href="../Chapter5/param_demo.html">
+            
+                    
+                    第六篇 patam_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/时钟与定时器.html">
+            
+                <a href="../Chapter5/时钟与定时器.html">
+            
+                    
+                    第七篇 时钟与定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/日志与异常.html">
+            
+                <a href="../Chapter5/日志与异常.html">
+            
+                    
+                    第八篇 日志与异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/Introduction.html">
+            
+                <a href="../Chapter6/Introduction.html">
+            
+                    
+                    第六章 tf与urdf
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/认识tf.html">
+            
+                <a href="../Chapter6/认识tf.html">
+            
+                    
+                    第一篇 认识tf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第五篇 rosbridge</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rosbridge">Rosbridge</h1>
+<p>Rosbridge&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x5728;ROS&#x7CFB;&#x7EDF;&#x548C;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x5305;,&#x5C31;&#x50CF;&#x662F;&#x5B83;&#x7684;&#x540D;&#x5B57;&#x4E00;&#x6837;,&#x8D77;&#x5230;&#x4E00;&#x4E2A;&quot;&#x6865;&#x6881;&quot;&#x7684;&#x4F5C;&#x7528;,&#x4F7F;&#x5F97;ros&#x7CFB;&#x7EDF;&#x548C;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;.Rosbridge&#x4E3A;&#x975E;ROS&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;JSON API,&#x6709;&#x8BB8;&#x591A;&#x4E0E;Rosbridge&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#x524D;&#x7AEF;&#xFF0C;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;Web&#x6D4F;&#x89C8;&#x5668;&#x4EA4;&#x4E92;&#x7684;WebSocket&#x670D;&#x52A1;&#x5668;&#x3002;Rosbridge_suite&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;Rosbridge&#x7684;&#x5143;&#x7A0B;&#x5E8F;&#x5305;&#xFF0C;&#x7528;&#x4E8E;Rosbridge&#x7684;&#x5404;&#x79CD;&#x524D;&#x7AEF;&#x7A0B;&#x5E8F;&#x5305;&#xFF08;&#x5982;WebSocket&#x7A0B;&#x5E8F;&#x5305;&#xFF09;&#x548C;&#x5E2E;&#x52A9;&#x7A0B;&#x5E8F;&#x5305;&#x3002;</p>
+<h2 id="&#x534F;&#x8BAE;&#x548C;&#x5B9E;&#x73B0;">&#x534F;&#x8BAE;&#x548C;&#x5B9E;&#x73B0;</h2>
+<p>Rosbridge&#x4E3B;&#x8981;&#x5305;&#x542B;&#x4E24;&#x90E8;&#x5206;&#x5185;&#x5BB9;:&#x534F;&#x8BAE;(Potocol)&#x548C;&#x5B9E;&#x73B0;(Implementation)</p>
+<h3 id="&#x534F;&#x8BAE;">&#x534F;&#x8BAE;</h3>
+<p>&#xFF32;osbridge Protocol&#x63D0;&#x4F9B;&#x4E86;&#x975E;ROS&#x7A0B;&#x5E8F;&#x4E0E;ROS&#x901A;&#x4FE1;&#x7684;&#x5177;&#x4F53;&#x7684;&#x683C;&#x5F0F;&#x89C4;&#x8303;&#xFF0C;&#x89C4;&#x8303;&#x57FA;&#x4E8E;JSON&#x683C;&#x5F0F;,&#x5305;&#x62EC;&#x8BA2;&#x9605;topic&#xFF0C;&#x53D1;&#x5E03;message,&#x8C03;&#x7528;server&#xFF0C;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x538B;&#x7F29;&#x6D88;&#x606F;&#x7B49;&#x7B49;&#xFF0E;&#x4F8B;&#x5982;&#x8BA2;&#x9605;topic&#x7684;&#x683C;&#x5F0F;&#x89C4;&#x8303;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>{ &quot;op&quot;: &quot;subscribe&quot;,
+    &quot;topic&quot;: &quot;/cmd_vel&quot;,
+    &quot;type&quot;: &quot;geometry_msgs/Twist&quot;
+}
+</code></pre><p>&#x6B64;&#x89C4;&#x8303;&#x4E0E;&#x6240;&#x7528;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x548C;&#x4F20;&#x8F93;&#x65B9;&#x5F0F;&#x65E0;&#x5173;&#xFF0C;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x53D1;&#x9001;JSON&#x683C;&#x5F0F;&#x7684;&#x8BED;&#x97F3;&#x548C;&#x4F20;&#x8F93;&#x65B9;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;Rosbridge protocol&#x8FDB;&#x884C;&#x4EA4;&#x6D41;&#xFF0C;&#x5E76;&#x4E14;&#x4E0E;ROS&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0E;</p>
+<h3 id="&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</h3>
+<p>Rosbridge_suite&#x5143;&#x7A0B;&#x5E8F;&#x5305;&#x662F;&#x5B9E;&#x73B0;&#xFF32;osbridge&#x3000;Protocol&#x5E76;&#x63D0;&#x4F9B;WebSocket&#x4F20;&#x8F93;&#x5C42;&#x7684;&#x5305;&#x7684;&#x96C6;&#x5408;&#x3002;
+&#x8FD9;&#x4E9B;&#x8F6F;&#x4EF6;&#x5305;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>Rosbridge_library : &#x6838;&#x5FC3;rosbridge&#x8F6F;&#x4EF6;&#x5305;&#x3002;Rosbridge_library&#x8D1F;&#x8D23;&#x83B7;&#x53D6;JSON&#x5B57;&#x7B26;&#x4E32;&#x5E76;&#x5C06;&#x547D;&#x4EE4;&#x53D1;&#x9001;&#x5230;ROS&#xFF0C;&#x53CD;&#x8FC7;&#x6765;&#x63A5;&#x6536;&#x5904;&#x7406;ROS&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x4E4B;&#x8F6C;&#x6362;&#x4E3A;JSON&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8F6C;&#x4EA4;&#x7ED9;&#x975E;ROS&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>rosapi : &#x901A;&#x8FC7;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x6765;&#x8BBF;&#x95EE;&#x67D0;&#x4E9B;ROS&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x901A;&#x5E38;&#x4E3A;ROS&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x4FDD;&#x7559;&#x7684;&#x670D;&#x52A1;&#xFF0E;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x5305;&#x62EC;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x4E3B;&#x9898;&#x5217;&#x8868;&#x7B49;&#x7B49;&#x3002;</li>
+<li>rosbridge_server : &#x867D;&#x7136;Rosbridge_library&#x63D0;&#x4F9B;JSON&#x5230;ROS&#x8F6C;&#x6362;&#xFF0C;&#x4F46;&#x5B83;&#x5C06;&#x4F20;&#x8F93;&#x5C42;&#x7559;&#x7ED9;&#x5176;&#x4ED6;&#x4EBA;&#x3002;Rosbridge_server&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;WebSocket&#x8FDE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x4E0E;ROS&#x201C;&#x4EA4;&#x8C08;&#x201D;&#x3002;Roslibjs&#x662F;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x7684;JavaScript&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;rosbridge_server&#x4E0E;ROS&#x8FDB;&#x884C;&#x4EA4;&#x6D41;&#x3002;
+&#x6E90;&#x7801;</li>
+</ul>
+<h2 id="&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;">&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;</h2>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p>Rosbridge&#x662F;&#x57FA;&#x4E8E;ROS&#x7684;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x786E;&#x4FDD;&#x81EA;&#x5DF1;&#x6B63;&#x786E;&#x7684;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E86;ROS&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x7EC8;&#x7AEF;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code>sudo apt-get install ros- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rosdistro</span><span class="token punctuation">&gt;</span></span> -rosbridge-server
+</code></pre><p>&#x4E2D;&#x95F4;&#x7684;rosdistro&#x4E3A;&#x81EA;&#x5DF1;&#x7684;ROS&#x7248;&#x672C;&#xFF0C;&#x4F9D;&#x7167;&#x81EA;&#x5DF1;&#x7684;&#x7248;&#x672C;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF0E;</p>
+<h3 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h3>
+<p>&#x5173;&#x4E8E;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x672C;&#x8BFE;&#x7A0B;&#x7684;&#x89C6;&#x9891;&#x8BFE;&#x7A0B;&#xFF0C;&#x7B80;&#x5355;&#x7684;&#x5165;&#x95E8;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#x5982;&#x4E0B;&#xFF1A;
+<a href="http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge" target="_blank">&#x94FE;&#x63A5;</a></p>
+<div id="gitalk-container"></div>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rosbag.html" class="navigation navigation-prev " aria-label="Previous page: 第四篇 rosbag">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="moveit.html" class="navigation navigation-next " aria-label="Next page: 第六篇 moveit">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第五篇 rosbridge","level":"1.5.5","depth":2,"next":{"title":"第六篇 moveit","level":"1.5.6","depth":2,"path":"Chapter4/moveit.md","ref":"Chapter4/moveit.md","articles":[]},"previous":{"title":"第四篇 rosbag","level":"1.5.4","depth":2,"path":"Chapter4/rosbag.md","ref":"Chapter4/rosbag.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter4/rosbridge.md","mtime":"2020-06-13T11:14:52.615Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

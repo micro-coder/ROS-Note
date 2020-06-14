@@ -1,10 +1,25 @@
-# message消息格式
+# msg消息格式
 
 topic有很严格的格式要求，比如上节的摄像头进程中的rgb图像topic，它就必然要遵循ROS中定义好的rgb图像格式。这种数据格式就是Message。Message按照定义解释就是topic内容的数据类型，也称之为topic的格式标准。这里和我们平常用到的Massage直观概念有所不同，这里的Message不单单指一条发布或者订阅的消息，也指定为topic的格式标准。
 
-## 一、message结构与类型
+msg文件就是一个描述ROS中所使用消息类型的简单文本。它们会被用来生成不同语言的源代码。
+msg文件存放在package的msg目录下，srv文件则存放在srv目录下。
 
-基本的msg包括bool、int8、int16、int32、int64(以及uint)、float、float64、string、time、duration、header、可变长数组array[] 、固定长度数组array[C]。那么具体的一个msg是怎么组成的呢？我们用一个具体的msg来了解，例如上例中的msg：sensor_msg/image,文件的绝对路径是 **/opt/ros/kinetic/share/sensor_msgs**,它的结构如下：
+## 一、message结构与类型
+msg文件实际上就是每行声明一个数据类型和变量名。可以使用的数据类型如下：
+
+* int8, int16, int32, int64 (plus uint*)，以及uint(8,16,32,64)类型
+* float32, float64
+* string
+* time, duration
+* Header
+* variable-length array[] and fixed-length array[C]
+* 嵌套other msg files
+
+在ROS中有一个特殊的数据类型：Header，它含有时间戳和坐标系信息。在msg文件的第一行经常可以看到Header header的声明.
+
+基本的msg包括bool、int8、int16、int32、int64、float、float64、string、time、duration、header、可变长数组array[] 、固定长度数组array[C]。  
+那么具体的一个msg是怎么组成的呢？我们用一个具体的msg来了解，例如上例中的msg：sensor_msg/image,文件的绝对路径是 **/opt/ros/kinetic/share/sensor_msgs**,它的结构如下：
 ```python
 # This message contains an uncompressed image
 # (0, 0) is at top-left corner of image

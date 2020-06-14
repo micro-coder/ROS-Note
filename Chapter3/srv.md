@@ -1,5 +1,9 @@
 # srv文件
 
+<font color="red">一个srv文件描述一项服务。它包含两个部分：请求和响应</font>
+   
+msg文件存放在package的msg目录下，srv文件则存放在srv目录下。
+
 类似msg文件，srv文件是用来描述服务(service)数据类型的，service通信的数据格式就定义在*.srv格式的文件中。它声明了一个服务类型，包括请求(request)和响应（reply）两部分。其格式声明如下，举例：
 
 msgs_demo/srv/DetectHuman.srv

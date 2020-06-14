@@ -542,6 +542,200 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/rosbag.html">
+            
+                <a href="../Chapter4/rosbag.html">
+            
+                    
+                    第四篇 rosbag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter4/rosbridge.html">
+            
+                <a href="../Chapter4/rosbridge.html">
+            
+                    
+                    第五篇 rosbridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter4/moveit.html">
+            
+                <a href="../Chapter4/moveit.html">
+            
+                    
+                    第六篇 moveit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/Introduction.html">
+            
+                <a href="../Chapter5/Introduction.html">
+            
+                    
+                    第五章 roscpp编程代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/ClientLibrary和roscpp.html">
+            
+                <a href="../Chapter5/ClientLibrary和roscpp.html">
+            
+                    
+                    第一篇 ClientLibrary和roscpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                <a href="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                    
+                    第二篇 节点初始、关闭以及NodeHandle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/topic_demo.html">
+            
+                <a href="../Chapter5/topic_demo.html">
+            
+                    
+                    第三篇 topic_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/spin.html">
+            
+                <a href="../Chapter5/spin.html">
+            
+                    
+                    第四篇 spin()与回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/service_demo.html">
+            
+                <a href="../Chapter5/service_demo.html">
+            
+                    
+                    第五篇 service_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/param_demo.html">
+            
+                <a href="../Chapter5/param_demo.html">
+            
+                    
+                    第六篇 patam_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/时钟与定时器.html">
+            
+                <a href="../Chapter5/时钟与定时器.html">
+            
+                    
+                    第七篇 时钟与定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/日志与异常.html">
+            
+                <a href="../Chapter5/日志与异常.html">
+            
+                    
+                    第八篇 日志与异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/Introduction.html">
+            
+                <a href="../Chapter6/Introduction.html">
+            
+                    
+                    第六章 tf与urdf
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/认识tf.html">
+            
+                <a href="../Chapter6/认识tf.html">
+            
+                    
+                    第一篇 认识tf
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -596,6 +790,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="srv&#x6587;&#x4EF6;">srv&#x6587;&#x4EF6;</h1>
+<font color="red">&#x4E00;&#x4E2A;srv&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x4E00;&#x9879;&#x670D;&#x52A1;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;</font>
+
+<p>msg&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x5728;package&#x7684;msg&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;srv&#x6587;&#x4EF6;&#x5219;&#x5B58;&#x653E;&#x5728;srv&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
 <p>&#x7C7B;&#x4F3C;msg&#x6587;&#x4EF6;&#xFF0C;srv&#x6587;&#x4EF6;&#x662F;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x670D;&#x52A1;(service)&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#xFF0C;service&#x901A;&#x4FE1;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5C31;&#x5B9A;&#x4E49;&#x5728;*.srv&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5B83;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;&#x8BF7;&#x6C42;(request)&#x548C;&#x54CD;&#x5E94;&#xFF08;reply&#xFF09;&#x4E24;&#x90E8;&#x5206;&#x3002;&#x5176;&#x683C;&#x5F0F;&#x58F0;&#x660E;&#x5982;&#x4E0B;&#xFF0C;&#x4E3E;&#x4F8B;&#xFF1A;</p>
 <p>msgs_demo/srv/DetectHuman.srv</p>
 <pre class="language-"><code>bool start_detect     #client&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x683C;&#x5F0F;
@@ -813,7 +1010,7 @@ string message # &#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x9519;&#x8BEF;&#x4FE1;&#x606F
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第六篇 srv文件","level":"1.4.6","depth":2,"next":{"title":"第七章 parameter_server","level":"1.4.7","depth":2,"path":"Chapter3/parameter_server.md","ref":"Chapter3/parameter_server.md","articles":[]},"previous":{"title":"第五篇 service服务","level":"1.4.5","depth":2,"path":"Chapter3/service.md","ref":"Chapter3/service.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/srv.md","mtime":"2020-06-04T06:35:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T06:21:55.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第六篇 srv文件","level":"1.4.6","depth":2,"next":{"title":"第七章 parameter_server","level":"1.4.7","depth":2,"path":"Chapter3/parameter_server.md","ref":"Chapter3/parameter_server.md","articles":[]},"previous":{"title":"第五篇 service服务","level":"1.4.5","depth":2,"path":"Chapter3/service.md","ref":"Chapter3/service.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/srv.md","mtime":"2020-06-14T07:25:54.519Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

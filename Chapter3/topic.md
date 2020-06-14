@@ -8,7 +8,11 @@ ROS的通信方式是ROS最为核心的概念，ROS系统的精髓就在于它�
 
 ## 一、topic简介
 
-ROS中的通信方式中，topic是常用的一种。<font color="red">**对于实时性、周期性的消息，使用topic来传输是最佳的选择。topic是一种点对点的单向通信方式，这里的“点”指的是node，也就是说node之间可以通过topic方式来传递信息。**</font>topic要经历下面几步的初始化过程：首先，publisher节点和subscriber节点都要到节点管理器进行注册，然后publisher会发布topic，subscriber在master的指挥下会订阅该topic，从而建立起sub-pub之间的通信。注意整个过程是单向的。其结构示意图如下：
+ROS中的通信方式中，topic是常用的一种。<font color="red">**对于实时性、周期性的消息，使用topic来传输是最佳的选择。topic是一种点对点的单向通信方式，这里的“点”指的是node，也就是说node之间可以通过topic方式来传递信息。**</font>
+
+<font color="red">**Topic是ROS里一种单向的异步通信的模型。一般是节点间分工明确，有的节点只负责发送，有的节点只负责接收处理。**</font>对于绝大多数的机器人应用场景，比如传感器数据收发，速度控制指令的收发，Topic模型是最适合的通信方式。
+
+topic要经历下面几步的初始化过程：首先，publisher节点和subscriber节点都要到节点管理器进行注册，然后publisher会发布topic，subscriber在master的指挥下会订阅该topic，从而建立起sub-pub之间的通信。注意整个过程是单向的。其结构示意图如下：
 ![topic](picture/1-0.jpg)
 
 Subscriber接收消息会进行处理，一般这个过程叫做回调(Callback)。所谓回调就是指提前定义好了一个处理函数（写在代码中），当有消息来就会触发这个处理函数，此函数会对消息进行处理。
