@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二篇 RViz · ROS学习笔记</title>
+        <title>第四篇 rosbag · ROS学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -90,10 +90,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="rqt.html" />
+    <link rel="next" href="rosbridge.html" />
     
     
-    <link rel="prev" href="gazebo.html" />
+    <link rel="prev" href="rqt.html" />
     
 
     <style>
@@ -516,7 +516,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="RViz.html">
+        <li class="chapter " data-level="1.5.2" data-path="RViz.html">
             
                 <a href="RViz.html">
             
@@ -542,7 +542,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="rosbag.html">
+        <li class="chapter active" data-level="1.5.4" data-path="rosbag.html">
             
                 <a href="rosbag.html">
             
@@ -771,7 +771,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二篇 RViz</a>
+        <a href=".." >第四篇 rosbag</a>
     </h1>
 </div>
 
@@ -789,28 +789,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rviz">RViz</h1>
-<p>RViz(the Robit Visualization tool)&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x3002;<br>&#x53EF;&#x89C6;&#x5316;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x76F4;&#x89C2;&#x7684;&#x663E;&#x793A;&#x51FA;&#x56FE;&#x50CF;&#x3001;&#x96F7;&#x8FBE;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x6781;&#x5927;&#x7684;&#x65B9;&#x4FBF;&#x4E86;&#x76D1;&#x63A7;&#x548C;&#x8C03;&#x8BD5;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
-<p>Gazebo&#x662F;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x4EFF;&#x771F;&#x5DE5;&#x5177;&#xFF0C;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5F00;&#x6E90;&#x673A;&#x5668;&#x4EBA;&#x4EFF;&#x771F;&#x5E73;&#x53F0;&#x3002;&#x5F53;&#x4ECA;&#x5E02;&#x9762;&#x4E0A;&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x4EFF;&#x771F;&#x5DE5;&#x5177;&#x4F8B;&#x5982;V&#x2014;Rep&#x3001;Webots&#x7B49;&#x7B49;&#x3002;&#x4F46;&#x662F;Gazebo&#x4E0D;&#x4EC5;&#x5F00;&#x6E90;&#xFF0C;&#x4E5F;&#x662F;&#x517C;&#x5BB9;ROS&#x6700;&#x597D;&#x7684;&#x4EFF;&#x771F;&#x5DE5;&#x5177;&#x3002;</p>
-<p><img src="picture/RViz.png" alt="RViz"></p>
-<p>Gazebo&#x7684;&#x529F;&#x80FD;&#x5F88;&#x5F3A;&#x5927;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x4F18;&#x70B9;&#x662F;&#x5BF9;ROS&#x7684;&#x652F;&#x6301;&#x5F88;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;Gazebo&#x548C;ROS&#x90FD;&#x7531;OSRF&#xFF08;Open Source Robotics Foundation&#xFF09;&#x5F00;&#x6E90;&#x673A;&#x5668;&#x4EBA;&#x7EC4;&#x7EC7;&#x6765;&#x7EF4;&#x62A4;&#x3002;Gazebo&#x652F;&#x6301;&#x5F88;&#x591A;&#x5F00;&#x6E90;&#x7684;&#x7269;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x6BD4;&#x5982;&#x6700;&#x5178;&#x578B;&#x7684;ODE&#x3002;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x8FD0;&#x52A8;&#x5B66;&#x3001;&#x52A8;&#x529B;&#x5B66;&#x4EFF;&#x771F;&#xFF0C;&#x80FD;&#x591F;&#x6A21;&#x62DF;&#x673A;&#x5668;&#x4EBA;&#x5E38;&#x7528;&#x7684;&#x4F20;&#x611F;&#x5668;&#xFF08;&#x5982;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;IMU&#x7B49;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x73AF;&#x5883;&#x548C;&#x573A;&#x666F;&#x3002;</p>
-<h2 id="&#x64CD;&#x4F5C;&#x8BF4;&#x660E;">&#x64CD;&#x4F5C;&#x8BF4;&#x660E;</h2>
-<ol>
-<li>&#x548C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x6D4B;&#x8BD5;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x6253;&#x5F00;&#x6559;&#x6750;&#x7684;&#x6A21;&#x62DF;&#x573A;&#x666F;<pre class="language-"><code>roslaunch robot_sim_demo robot_spawn_launch
-</code></pre></li>
-<li>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EC8;&#x7AEF;&#xFF0C;&#x5E76;&#x8F93;&#x5165;<code>rviz</code>,&#x5C31;&#x53EF;&#x4EE5;&#x6253;&#x5F00;RViz&#x5DE5;&#x5177;&#x4E86;<pre class="language-"><code>rviz
-</code></pre></li>
-<li>&#x5BF9;&#x5730;&#x56FE;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#xFF1A;<ul>
-<li>&#x5E73;&#x79FB;&#xFF1A;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;&#x4E2D;&#x952E;</li>
-<li>&#x65CB;&#x8F6C;&#xFF1A;&#x9F20;&#x6807;&#x5DE6;&#x952E;</li>
-<li>&#x653E;&#x7F29;&#xFF1A;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;</li>
-<li>&#x754C;&#x9762;&#x5DE6;&#x4FA7;&#x662F;&#x63A7;&#x5236;&#x9762;&#x677F;&#xFF0C;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;</li>
-</ul>
-</li>
-</ol>
-<p>RViz&#x7684;&#x63D2;&#x4EF6;&#x79CD;&#x7C7B;&#x7E41;&#x591A;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x8C03;&#x8BD5;ROS&#x7A0B;&#x5E8F;&#x3002;</p>
-<h2 id="gazebo&#x4E0E;rviz">gazebo&#x4E0E;RViz</h2>
-<p>&#x867D;&#x7136;&#x4ECE;&#x754C;&#x9762;&#x4E0A;&#x6765;&#x770B;&#xFF0C;RViz&#x548C;Gazebo&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x4E24;&#x8005;&#x6709;&#x7740;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x3002;Gazebo&#x5B9E;&#x73B0;&#x7684;&#x662F;&#x4EFF;&#x771F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x4E16;&#x754C;&#xFF1B;<font color="red">RViz&#x5B9E;&#x73B0;&#x7684;&#x662F;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x5448;&#x73B0;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5DE6;&#x4FA7;&#x7684;&#x63D2;&#x4EF6;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;subscriber&#x3002;RViz&#x63A5;&#x6536;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x663E;&#x793A;&#x3002;</font>&#x6240;&#x4EE5;RViz&#x548C;Gazebo&#x6709;&#x672C;&#x8D28;&#x7684;&#x5DEE;&#x5F02;&#x3002;</p>
+                                <h1 id="rosbag">rosbag</h1>
+<p>rosbag&#x662F;&#x4E00;&#x5957;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x548C;&#x56DE;&#x653E;ROS topic(&#x4E3B;&#x9898;)&#x7684;&#x5DE5;&#x5177;&#x3002;&#x5B83;&#x65E8;&#x5728;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x5E76;&#x907F;&#x514D;&#x6D88;&#x606F;&#x7684;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x3002;rosbag package&#x63D0;&#x4F9B;&#x4E86;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x548C;&#x4EE3;&#x7801;API&#xFF0C;&#x53EF;&#x4EE5;&#x7528;C++&#x6216;&#x8005;python&#x6765;&#x7F16;&#x5199;&#x5305;&#x3002;&#x800C;&#x4E14;rosbag&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x548C;&#x4EE3;&#x7801;API&#x662F;&#x7A33;&#x5B9A;&#x7684;&#xFF0C;&#x59CB;&#x7EC8;&#x4FDD;&#x6301;&#x5411;&#x540E;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x3002;</p>
+<h2 id="&#x64CD;&#x4F5C;&#x547D;&#x4EE4;">&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</h2>
+<p>rosbag&#x5BF9;&#x8F6F;&#x4EF6;&#x5305;&#x6765;&#x64CD;&#x4F5C;&#xFF0C;&#x4E00;&#x4E2A;&#x5305;&#x662F;ROS&#x7528;&#x4E8E;&#x5B58;&#x50A8;ROS&#x6D88;&#x606F;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;rosbag&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x3001;&#x56DE;&#x653E;&#x548C;&#x64CD;&#x4F5C;&#x5305;&#x3002;&#x6307;&#x4EE4;&#x5217;&#x8868;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x547D;&#x4EE4;</th>
+<th style="text-align:center">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cheak</td>
+<td style="text-align:center">&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x5305;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5728;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x8FDB;&#x884C;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8FC1;&#x79FB;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">decompress</td>
+<td style="text-align:center">&#x538B;&#x7F29;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">filter</td>
+<td style="text-align:center">&#x89E3;&#x538B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">fix</td>
+<td style="text-align:center">&#x5728;&#x5305;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x590D;&#x6D88;&#x606F;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x64AD;&#x653E;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">help</td>
+<td style="text-align:center">&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x547D;&#x4EE4;&#x6307;&#x793A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:center">info</td>
+<td style="text-align:center">&#x603B;&#x7ED3;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">play</td>
+<td style="text-align:center">&#x4EE5;&#x4E00;&#x79CD;&#x65F6;&#x95F4;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x56DE;&#x653E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">record</td>
+<td style="text-align:center">&#x7528;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x5185;&#x5BB9;&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">reindex</td>
+<td style="text-align:center">&#x91CD;&#x65B0;&#x7D22;&#x5F15;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5305;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>rosbag&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x80FD;&#x591F;&#x5BF9;&#x8F6F;&#x4EF6;&#x5305;&#x8FDB;&#x884C;&#x5F88;&#x591A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x62E5;&#x6709;&#x4EE3;&#x7801;API&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x5305;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x7F16;&#x5199;&#x3002;&#x589E;&#x52A0;&#x4E00;&#x4E2A;ROS API&#xFF0C;&#x7528;&#x4E8E;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x4E0E;&#x64AD;&#x653E;&#x548C;&#x5F55;&#x5236;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p>
 <div id="gitalk-container"></div>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -855,12 +885,12 @@
 
             
                 
-                <a href="gazebo.html" class="navigation navigation-prev " aria-label="Previous page: 第一篇 gazebo">
+                <a href="rqt.html" class="navigation navigation-prev " aria-label="Previous page: 第三篇 rqt">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="rqt.html" class="navigation navigation-next " aria-label="Next page: 第三篇 rqt">
+                <a href="rosbridge.html" class="navigation navigation-next " aria-label="Next page: 第五篇 rosbridge">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -871,7 +901,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二篇 RViz","level":"1.5.2","depth":2,"next":{"title":"第三篇 rqt","level":"1.5.3","depth":2,"path":"Chapter4/rqt.md","ref":"Chapter4/rqt.md","articles":[]},"previous":{"title":"第一篇 gazebo","level":"1.5.1","depth":2,"path":"Chapter4/gazebo.md","ref":"Chapter4/gazebo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter4/RViz.md","mtime":"2020-06-04T07:53:50.719Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四篇 rosbag","level":"1.5.4","depth":2,"next":{"title":"第五篇 rosbridge","level":"1.5.5","depth":2,"path":"Chapter4/rosbridge.md","ref":"Chapter4/rosbridge.md","articles":[]},"previous":{"title":"第三篇 rqt","level":"1.5.3","depth":2,"path":"Chapter4/rqt.md","ref":"Chapter4/rqt.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter4/rosbag.md","mtime":"2020-06-13T11:01:19.264Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -542,6 +542,200 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/rosbag.html">
+            
+                <a href="../Chapter4/rosbag.html">
+            
+                    
+                    第四篇 rosbag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter4/rosbridge.html">
+            
+                <a href="../Chapter4/rosbridge.html">
+            
+                    
+                    第五篇 rosbridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter4/moveit.html">
+            
+                <a href="../Chapter4/moveit.html">
+            
+                    
+                    第六篇 moveit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/Introduction.html">
+            
+                <a href="../Chapter5/Introduction.html">
+            
+                    
+                    第五章 roscpp编程代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/ClientLibrary和roscpp.html">
+            
+                <a href="../Chapter5/ClientLibrary和roscpp.html">
+            
+                    
+                    第一篇 ClientLibrary和roscpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                <a href="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                    
+                    第二篇 节点初始、关闭以及NodeHandle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/topic_demo.html">
+            
+                <a href="../Chapter5/topic_demo.html">
+            
+                    
+                    第三篇 topic_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/spin.html">
+            
+                <a href="../Chapter5/spin.html">
+            
+                    
+                    第四篇 spin()与回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/service_demo.html">
+            
+                <a href="../Chapter5/service_demo.html">
+            
+                    
+                    第五篇 service_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/param_demo.html">
+            
+                <a href="../Chapter5/param_demo.html">
+            
+                    
+                    第六篇 patam_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/时钟与定时器.html">
+            
+                <a href="../Chapter5/时钟与定时器.html">
+            
+                    
+                    第七篇 时钟与定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/日志与异常.html">
+            
+                <a href="../Chapter5/日志与异常.html">
+            
+                    
+                    第八篇 日志与异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/Introduction.html">
+            
+                <a href="../Chapter6/Introduction.html">
+            
+                    
+                    第六章 tf与urdf
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/认识tf.html">
+            
+                <a href="../Chapter6/认识tf.html">
+            
+                    
+                    第一篇 认识tf
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -596,28 +790,28 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="launch&#x6587;&#x4EF6;">launch&#x6587;&#x4EF6;</h1>
-<p>&#x673A;&#x5668;&#x4EBA;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x5DE5;&#x7A0B;&#xFF0C;&#x901A;&#x5E38;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x884C;&#x64CD;&#x4F5C;&#x65F6;&#x8981;&#x5F00;&#x542F;&#x5F88;&#x591A;&#x4E2A;node&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x542F;&#x52A8;&#x64CD;&#x4F5C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4F9D;&#x6B21;&#x8FDB;&#x884C;rosrun&#xFF0C;ROS&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x80FD;&#x4E00;&#x6B21;&#x6027;&#x542F;&#x52A8;master&#x548C;&#x591A;&#x4E2A;node&#x3002;&#x8BE5;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
+<p>&#x673A;&#x5668;&#x4EBA;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x5DE5;&#x7A0B;&#xFF0C;&#x901A;&#x5E38;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x884C;&#x64CD;&#x4F5C;&#x65F6;&#x8981;&#x5F00;&#x542F;&#x5F88;&#x591A;&#x4E2A;node&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x542F;&#x52A8;&#x64CD;&#x4F5C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4F9D;&#x6B21;&#x8FDB;&#x884C;rosrun&#xFF0C;ROS&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF1A;  &#x80FD;&#x4E00;&#x6B21;&#x6027;&#x542F;&#x52A8;master&#x548C;&#x591A;&#x4E2A;node&#x3002;&#x8BE5;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
 <pre class="language-"><code>roslaunch pkg_name file_name.launch
-</code></pre><p>roslaunch&#x547D;&#x4EE4;&#x9996;&#x5148;&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;roscore&#x6709;&#x6CA1;&#x6709;&#x8FD0;&#x884C;&#xFF0C;&#x4E5F;&#x5373;&#x662F;&#x786E;&#x8BA4;&#x8282;&#x70B9;&#x7BA1;&#x7406;&#x5668;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;master&#x6CA1;&#x6709;&#x542F;&#x52A8;&#xFF0C;&#x90A3;&#x4E48;roslaunch&#x5C31;&#x4F1A;&#x9996;&#x5148;&#x542F;&#x52A8;master&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167;launch&#x6587;&#x4EF6;&#x7684;&#x89C4;&#x5219;&#x6267;&#x884C;&#x3002;launch&#x6587;&#x4EF6;&#x91CC;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x542F;&#x52A8;&#x89C4;&#x5219;&#x3002; &#x6240;&#x4EE5;roslaunch&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x542F;&#x52A8;&#x5DE5;&#x5177;&#xFF0C;&#x80FD;&#x591F;&#x4E00;&#x6B21;&#x6027;&#x628A;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x6309;&#x7167;&#x6211;&#x4EEC;&#x9884;&#x5148;&#x7684;&#x914D;&#x7F6E;&#x542F;&#x52A8;&#x8D77;&#x6765;&#xFF0C;&#x51CF;&#x5C11;&#x6211;&#x4EEC;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x4E00;&#x6761;&#x6761;&#x8F93;&#x5165;&#x6307;&#x4EE4;&#x7684;&#x9EBB;&#x70E6;&#x3002;</p>
+</code></pre><p>roslaunch&#x547D;&#x4EE4;&#x9996;&#x5148;&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x7CFB;&#x7EDF;&#x7684;roscore&#x6709;&#x6CA1;&#x6709;&#x8FD0;&#x884C;&#xFF0C;&#x4E5F;&#x5373;&#x662F;&#x786E;&#x8BA4;&#x8282;&#x70B9;&#x7BA1;&#x7406;&#x5668;master&#x662F;&#x5426;&#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;master&#x6CA1;&#x6709;&#x542F;&#x52A8;&#xFF0C;&#x90A3;&#x4E48;roslaunch&#x5C31;&#x4F1A;&#x9996;&#x5148;&#x542F;&#x52A8;master&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167;launch&#x6587;&#x4EF6;&#x7684;&#x89C4;&#x5219;&#x6267;&#x884C;&#x3002;launch&#x6587;&#x4EF6;&#x91CC;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x542F;&#x52A8;&#x89C4;&#x5219;&#x3002; &#x6240;&#x4EE5;roslaunch&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x542F;&#x52A8;&#x5DE5;&#x5177;&#xFF0C;&#x80FD;&#x591F;&#x4E00;&#x6B21;&#x6027;&#x628A;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x6309;&#x7167;&#x6211;&#x4EEC;&#x9884;&#x5148;&#x7684;&#x914D;&#x7F6E;&#x542F;&#x52A8;&#x8D77;&#x6765;&#xFF0C;&#x51CF;&#x5C11;&#x6211;&#x4EEC;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x4E00;&#x6761;&#x6761;&#x8F93;&#x5165;&#x6307;&#x4EE4;&#x7684;&#x9EBB;&#x70E6;&#x3002;</p>
 <h2 id="&#x4E00;&#x3001;lanunch&#x6587;&#x4EF6;&#x5199;&#x6CD5;&#x4E0E;&#x4E0E;&#x683C;&#x5F0F;">&#x4E00;&#x3001;lanunch&#x6587;&#x4EF6;&#x5199;&#x6CD5;&#x4E0E;&#x4E0E;&#x683C;&#x5F0F;</h2>
 <p>launch&#x6587;&#x4EF6;&#x540C;&#x6837;&#x4E5F;&#x9075;&#x5FAA;&#x7740;xml&#x683C;&#x5F0F;&#x89C4;&#x8303;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x6807;&#x7B7E;&#x6587;&#x672C;&#xFF0C;&#x5B83;&#x7684;&#x683C;&#x5F0F;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x6807;&#x7B7E;&#xFF1A;</p>
 <pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>launch</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x6839;&#x6807;&#x7B7E;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>node</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x9700;&#x8981;&#x542F;&#x52A8;&#x7684;node&#x53CA;&#x5176;&#x53C2;&#x6570;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5305;&#x542B;&#x5176;&#x4ED6;launch--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>machine</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x6307;&#x5B9A;&#x8FD0;&#x884C;&#x7684;&#x673A;&#x5668;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>env-loader</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rosparam</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x542F;&#x52A8;yaml&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arg</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5B9A;&#x4E49;&#x53D8;&#x91CF;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remap</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;--&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>node</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x9700;&#x8981;&#x542F;&#x52A8;&#x7684;node&#x53CA;&#x5176;&#x53C2;&#x6570;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5305;&#x542B;&#x5176;&#x4ED6;launch--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>machine</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x6307;&#x5B9A;&#x8FD0;&#x884C;&#x7684;&#x673A;&#x5668;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>env-loader</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rosparam</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x542F;&#x52A8;yaml&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arg</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x5B9A;&#x4E49;&#x53D8;&#x91CF;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remap</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x8BBE;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;--&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>launch</span><span class="token punctuation">&gt;</span></span>    <span class="token comment">&lt;!--&#x6839;&#x6807;&#x7B7E;--&gt;</span>
 </code></pre>
 <p>&#x53C2;&#x8003;&#x94FE;&#x63A5;:<a href="http://wiki.ros.org/roslaunch/XML" target="_blank">http://wiki.ros.org/roslaunch/XML</a></p>
 <h2 id="&#x4E8C;&#x3001;launch&#x793A;&#x4F8B;">&#x4E8C;&#x3001;launch&#x793A;&#x4F8B;</h2>
 <p>launch&#x6587;&#x4EF6;&#x7684;&#x5199;&#x6CD5;&#x548C;&#x683C;&#x5F0F;&#x770B;&#x8D77;&#x6765;&#x5185;&#x5BB9;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>launch</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>node</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>talker<span class="token punctuation">&quot;</span></span> <span class="token attr-name">pkg</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rospy_tutorials<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>talker<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>node</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>talker<span class="token punctuation">&quot;</span></span> <span class="token attr-name">pkg</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rospy_tutorials<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>talker<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>launch</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <p>&#x8FD9;&#x662F;&#x5B98;&#x7F51;&#x7ED9;&#x51FA;&#x7684;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x662F;&#xFF0C;&#x5B83;&#x542F;&#x52A8;&#x4E86;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8282;&#x70B9;talker,&#x8BE5;&#x8282;&#x70B9;&#x662F;&#x5305;rospy_tutorials&#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x3002;
@@ -707,7 +901,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二篇 launch文件","level":"1.4.2","depth":2,"next":{"title":"第三篇 topic话题","level":"1.4.3","depth":2,"path":"Chapter3/topic.md","ref":"Chapter3/topic.md","articles":[]},"previous":{"title":"第一篇 node&master","level":"1.4.1","depth":2,"path":"Chapter3/node&master.md","ref":"Chapter3/node&master.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/launch.md","mtime":"2020-05-10T10:11:30.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T06:21:55.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二篇 launch文件","level":"1.4.2","depth":2,"next":{"title":"第三篇 topic话题","level":"1.4.3","depth":2,"path":"Chapter3/topic.md","ref":"Chapter3/topic.md","articles":[]},"previous":{"title":"第一篇 node&master","level":"1.4.1","depth":2,"path":"Chapter3/node&master.md","ref":"Chapter3/node&master.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/launch.md","mtime":"2020-06-14T08:55:37.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

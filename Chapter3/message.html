@@ -542,6 +542,200 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/rosbag.html">
+            
+                <a href="../Chapter4/rosbag.html">
+            
+                    
+                    第四篇 rosbag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Chapter4/rosbridge.html">
+            
+                <a href="../Chapter4/rosbridge.html">
+            
+                    
+                    第五篇 rosbridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Chapter4/moveit.html">
+            
+                <a href="../Chapter4/moveit.html">
+            
+                    
+                    第六篇 moveit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/Introduction.html">
+            
+                <a href="../Chapter5/Introduction.html">
+            
+                    
+                    第五章 roscpp编程代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/ClientLibrary和roscpp.html">
+            
+                <a href="../Chapter5/ClientLibrary和roscpp.html">
+            
+                    
+                    第一篇 ClientLibrary和roscpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                <a href="../Chapter5/节点初始、关闭以及NodeHandle.html">
+            
+                    
+                    第二篇 节点初始、关闭以及NodeHandle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/topic_demo.html">
+            
+                <a href="../Chapter5/topic_demo.html">
+            
+                    
+                    第三篇 topic_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/spin.html">
+            
+                <a href="../Chapter5/spin.html">
+            
+                    
+                    第四篇 spin()与回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/service_demo.html">
+            
+                <a href="../Chapter5/service_demo.html">
+            
+                    
+                    第五篇 service_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/param_demo.html">
+            
+                <a href="../Chapter5/param_demo.html">
+            
+                    
+                    第六篇 patam_demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/时钟与定时器.html">
+            
+                <a href="../Chapter5/时钟与定时器.html">
+            
+                    
+                    第七篇 时钟与定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/日志与异常.html">
+            
+                <a href="../Chapter5/日志与异常.html">
+            
+                    
+                    第八篇 日志与异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/Introduction.html">
+            
+                <a href="../Chapter6/Introduction.html">
+            
+                    
+                    第六章 tf与urdf
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/认识tf.html">
+            
+                <a href="../Chapter6/认识tf.html">
+            
+                    
+                    第一篇 认识tf
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -595,10 +789,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="message&#x6D88;&#x606F;&#x683C;&#x5F0F;">message&#x6D88;&#x606F;&#x683C;&#x5F0F;</h1>
+                                <h1 id="msg&#x6D88;&#x606F;&#x683C;&#x5F0F;">msg&#x6D88;&#x606F;&#x683C;&#x5F0F;</h1>
 <p>topic&#x6709;&#x5F88;&#x4E25;&#x683C;&#x7684;&#x683C;&#x5F0F;&#x8981;&#x6C42;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x8282;&#x7684;&#x6444;&#x50CF;&#x5934;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;rgb&#x56FE;&#x50CF;topic&#xFF0C;&#x5B83;&#x5C31;&#x5FC5;&#x7136;&#x8981;&#x9075;&#x5FAA;ROS&#x4E2D;&#x5B9A;&#x4E49;&#x597D;&#x7684;rgb&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5C31;&#x662F;Message&#x3002;Message&#x6309;&#x7167;&#x5B9A;&#x4E49;&#x89E3;&#x91CA;&#x5C31;&#x662F;topic&#x5185;&#x5BB9;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E5F;&#x79F0;&#x4E4B;&#x4E3A;topic&#x7684;&#x683C;&#x5F0F;&#x6807;&#x51C6;&#x3002;&#x8FD9;&#x91CC;&#x548C;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x7528;&#x5230;&#x7684;Massage&#x76F4;&#x89C2;&#x6982;&#x5FF5;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;Message&#x4E0D;&#x5355;&#x5355;&#x6307;&#x4E00;&#x6761;&#x53D1;&#x5E03;&#x6216;&#x8005;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x4E5F;&#x6307;&#x5B9A;&#x4E3A;topic&#x7684;&#x683C;&#x5F0F;&#x6807;&#x51C6;&#x3002;</p>
+<p>msg&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;ROS&#x4E2D;&#x6240;&#x4F7F;&#x7528;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7684;&#x7B80;&#x5355;&#x6587;&#x672C;&#x3002;&#x5B83;&#x4EEC;&#x4F1A;&#x88AB;&#x7528;&#x6765;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;
+msg&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x5728;package&#x7684;msg&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;srv&#x6587;&#x4EF6;&#x5219;&#x5B58;&#x653E;&#x5728;srv&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
 <h2 id="&#x4E00;&#x3001;message&#x7ED3;&#x6784;&#x4E0E;&#x7C7B;&#x578B;">&#x4E00;&#x3001;message&#x7ED3;&#x6784;&#x4E0E;&#x7C7B;&#x578B;</h2>
-<p>&#x57FA;&#x672C;&#x7684;msg&#x5305;&#x62EC;bool&#x3001;int8&#x3001;int16&#x3001;int32&#x3001;int64(&#x4EE5;&#x53CA;uint)&#x3001;float&#x3001;float64&#x3001;string&#x3001;time&#x3001;duration&#x3001;header&#x3001;&#x53EF;&#x53D8;&#x957F;&#x6570;&#x7EC4;array[] &#x3001;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x6570;&#x7EC4;array[C]&#x3002;&#x90A3;&#x4E48;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;msg&#x662F;&#x600E;&#x4E48;&#x7EC4;&#x6210;&#x7684;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;msg&#x6765;&#x4E86;&#x89E3;&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x4F8B;&#x4E2D;&#x7684;msg&#xFF1A;sensor_msg/image,&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x662F; <strong>/opt/ros/kinetic/share/sensor_msgs</strong>,&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>msg&#x6587;&#x4EF6;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x6BCF;&#x884C;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x53D8;&#x91CF;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>int8, int16, int32, int64 (plus uint*)&#xFF0C;&#x4EE5;&#x53CA;uint(8,16,32,64)&#x7C7B;&#x578B;</li>
+<li>float32, float64</li>
+<li>string</li>
+<li>time, duration</li>
+<li>Header</li>
+<li>variable-length array[] and fixed-length array[C]</li>
+<li>&#x5D4C;&#x5957;other msg files</li>
+</ul>
+<p>&#x5728;ROS&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;Header&#xFF0C;&#x5B83;&#x542B;&#x6709;&#x65F6;&#x95F4;&#x6233;&#x548C;&#x5750;&#x6807;&#x7CFB;&#x4FE1;&#x606F;&#x3002;&#x5728;msg&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x7ECF;&#x5E38;&#x53EF;&#x4EE5;&#x770B;&#x5230;Header header&#x7684;&#x58F0;&#x660E;.</p>
+<p>&#x57FA;&#x672C;&#x7684;msg&#x5305;&#x62EC;bool&#x3001;int8&#x3001;int16&#x3001;int32&#x3001;int64&#x3001;float&#x3001;float64&#x3001;string&#x3001;time&#x3001;duration&#x3001;header&#x3001;&#x53EF;&#x53D8;&#x957F;&#x6570;&#x7EC4;array[] &#x3001;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x6570;&#x7EC4;array[C]&#x3002;<br>&#x90A3;&#x4E48;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;msg&#x662F;&#x600E;&#x4E48;&#x7EC4;&#x6210;&#x7684;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;msg&#x6765;&#x4E86;&#x89E3;&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x4F8B;&#x4E2D;&#x7684;msg&#xFF1A;sensor_msg/image,&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x662F; <strong>/opt/ros/kinetic/share/sensor_msgs</strong>,&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python"><span class="token comment"># This message contains an uncompressed image</span>
 <span class="token comment"># (0, 0) is at top-left corner of image</span>
 <span class="token comment">#</span>
@@ -834,7 +1041,7 @@ TwistWithCovariance twist
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第四篇 msg消息格式","level":"1.4.4","depth":2,"next":{"title":"第五篇 service服务","level":"1.4.5","depth":2,"path":"Chapter3/service.md","ref":"Chapter3/service.md","articles":[]},"previous":{"title":"第三篇 topic话题","level":"1.4.3","depth":2,"path":"Chapter3/topic.md","ref":"Chapter3/topic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/message.md","mtime":"2020-05-10T10:11:30.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T06:21:55.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四篇 msg消息格式","level":"1.4.4","depth":2,"next":{"title":"第五篇 service服务","level":"1.4.5","depth":2,"path":"Chapter3/service.md","ref":"Chapter3/service.md","articles":[]},"previous":{"title":"第三篇 topic话题","level":"1.4.3","depth":2,"path":"Chapter3/topic.md","ref":"Chapter3/topic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","github","theme-comscore","search-plus","expandable-chapters","splitter","popup","katex","github-buttons","prism","-highlight","mygitalk","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 黄文庆","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/micro-coder/ROS-Note"},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"micro-coder","repo":"ROS-Note","type":"star","size":"small"},{"user":"micro-coder","type":"follow","width":"230","count":true}]},"mathjax":{"forceSVG":true},"mygitalk":{"flipMoveOptions":{},"enable":true,"clientID":"5b544b68bfe5308dca6f","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["micro-coder"],"createIssueManually":false,"distractionFreeMode":false,"repo":"ROS-Note","owner":"micro-coder","enableHotKey":true,"clientSecret":"b9c49dd9868905960a606a8a116f86b842478507","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false,"treeLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"黄文庆","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ROS学习笔记","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Chapter3/message.md","mtime":"2020-06-14T01:36:01.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-14T13:24:09.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
